@@ -251,7 +251,7 @@ nav.compact {
 .hero-photo {
   position: absolute;
   inset: 0;
-  background: url('/assets/img/camilo-photo.jpg') center 15% / cover no-repeat;
+  background: url('/assets/img/camilo-photo.webp') center 15% / cover no-repeat;
   z-index: 1;
 }
 
