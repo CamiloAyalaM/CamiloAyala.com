@@ -67,7 +67,7 @@ export const portfolioProjects = [
     tags: ['Diseño Participativo', 'Impacto Social', 'Producto'],
     featured: true,
     gridSize: 'md',
-    image: '/assets/img/portada-modulario.jpg'
+    image: '/assets/img/Portada-modulario.jpg'
   },
   {
     id: 'durero',
