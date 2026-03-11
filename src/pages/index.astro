@@ -245,7 +245,7 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
       {services.map((srv, i) => (
         <div class="srv-card rv" style={`transition-delay: ${i * 0.07}s`}>
           <div class="srv-n">{srv.number}</div>
-          <div class="srv-title">{srv.title}</div>
+          <h3 class="srv-title">{srv.title}</h3>
           <div class="srv-desc">{srv.description}</div>
           <div class="srv-tags">
             {srv.tags.map(tag => <span class="srv-tag">{tag}</span>)}
