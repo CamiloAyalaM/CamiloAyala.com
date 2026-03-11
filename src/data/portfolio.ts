@@ -53,7 +53,7 @@ export const portfolioProjects = [
     tags: ['Campaña Digital', 'Diseño Web', 'Comunicación'],
     featured: true,
     gridSize: 'lg',
-    image: '/assets/img/portfolio-educativo.jpg'
+    image: '/assets/img/era-de-los-datos.png'
   },
   {
     id: 'modulario',
