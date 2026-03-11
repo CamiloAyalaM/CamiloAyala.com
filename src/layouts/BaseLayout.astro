@@ -61,40 +61,75 @@ const canonicalURL = new URL(Astro.url.pathname, url);
   
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Camilo Ayala Monje",
-    "jobTitle": "Diseñador Estratégico & Profesor",
-    "url": "https://camiloayala.com",
-    "image": "https://camiloayala.com/assets/img/camilo-photo.jpg",
-    "sameAs": [
-      "https://linkedin.com/in/camiloayalam",
-      "https://behance.net/camiloayala",
-      "https://orcid.org/0000-0002-3485-718X"
-    ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Universidad El Bosque"
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Camilo Ayala Monje",
+      "jobTitle": "Diseñador Estratégico & Profesor",
+      "url": "https://camiloayala.com",
+      "image": "https://camiloayala.com/assets/img/camilo-photo.jpg",
+      "sameAs": [
+        "https://linkedin.com/in/camiloayalam",
+        "https://behance.net/camiloayala",
+        "https://orcid.org/0000-0002-3485-718X"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Universidad El Bosque"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bogotá",
+        "addressRegion": "DC",
+        "addressCountry": "CO"
+      },
+      "email": "camiloayalamonje@gmail.com",
+      "knowsAbout": [
+        "Diseño Estratégico",
+        "Marketing Digital",
+        "Comunicación",
+        "UX/UI",
+        "Diseño Generativo",
+        "IA",
+        "Docencia",
+        "Design Thinking"
+      ]
     },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bogotá",
-      "addressRegion": "DC",
-      "addressCountry": "CO"
-    },
-    "email": "camiloayalamonje@gmail.com",
-    "knowsAbout": [
-      "Diseño Estratégico",
-      "Marketing Digital",
-      "Comunicación",
-      "UX/UI",
-      "Diseño Generativo",
-      "IA",
-      "Docencia",
-      "Design Thinking"
-    ]
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Camilo Ayala Monje — Diseño Estratégico & Consultoría",
+      "url": "https://camiloayala.com",
+      "image": "https://camiloayala.com/assets/img/camilo-photo.jpg",
+      "email": "camiloayalamonje@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bogotá",
+        "addressRegion": "Bogotá D.C.",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 4.7110,
+        "longitude": -74.0721
+      },
+      "areaServed": ["Colombia", "Latinoamérica"],
+      "priceRange": "$$",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Diseño y Consultoría",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Estrategia de Marca", "description": "Posicionamiento, identidad y comunicación coherente para marcas que quieren diferenciarse con autoridad." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marketing Digital", "description": "SEO, SEM, CRM y analítica. Estrategias medibles con enfoque en conversión y crecimiento sostenido." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UX / UI Consulting", "description": "Experiencias digitales centradas en el usuario. Auditorías, rediseños y design systems de alto impacto." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personal Branding", "description": "Para académicos y profesionales que quieren construir presencia digital con autoridad en Latinoamérica." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Contenido & Curación", "description": "Estrategia editorial orientada a SEO. Redacción y distribución para audiencias en diseño, educación y tecnología." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Talleres & Formación", "description": "Workshops de Design Thinking, branding e IA aplicada para equipos creativos, instituciones y empresas." } }
+        ]
+      }
+    }
+  ]
   </script>
   
   <title>{title}</title>
