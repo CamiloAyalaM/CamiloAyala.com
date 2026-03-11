@@ -30,7 +30,7 @@ if (daysAgo < 7) {
 
 <a href={`/blog/${id}`} class="li-card rv">
   <div class="li-meta">
-    <div class="li-av"></div>
+    <div class="li-av"><img src="/assets/img/camilo-photo.jpg" alt="Camilo Ayala" /></div>
     <div>
       <div class="li-nm">Camilo Ayala Monje, MDes</div>
       <div class="li-dt">{dateLabel}</div>
@@ -46,7 +46,6 @@ if (daysAgo < 7) {
     ))}
   </div>
   <div class="li-foot">
-    <span class="li-link">Leer más →</span>
     <span class="li-react">👍 {reactions}</span>
   </div>
 </a>
@@ -80,8 +79,15 @@ if (daysAgo < 7) {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #b6903a 0%, #d0a850 100%);
+    overflow: hidden;
     flex-shrink: 0;
+  }
+
+  .li-av img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
   }
 
   .li-nm {

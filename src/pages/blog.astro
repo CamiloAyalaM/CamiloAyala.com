@@ -14,7 +14,7 @@ const allPosts = getAllPosts();
   <Navigation />
 
   <section class="li-sec" style="padding: 120px var(--edge); background: var(--cream);">
-    <div class="rv-l" style="margin-bottom: 60px;">
+    <div style="margin-bottom: 60px;">
       <div class="s-tag">
         <div class="s-line"></div>
         <span class="s-txt">Blog</span>
@@ -35,50 +35,4 @@ const allPosts = getAllPosts();
     </div>
   </section>
 
-  <style is:global>
-    .li-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 32px;
-    }
-
-    .s-tag {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
-      opacity: 0;
-      animation: f-up 0.6s ease 0.2s forwards;
-    }
-
-    .s-line {
-      width: 24px;
-      height: 1px;
-      background: var(--gold);
-    }
-
-    .s-txt {
-      font-family: var(--mono);
-      font-size: 9px;
-      letter-spacing: 0.2em;
-      color: var(--gold);
-      text-transform: uppercase;
-    }
-
-    .sec {
-      font-family: var(--serif);
-      font-size: clamp(32px, 5vw, 56px);
-      font-weight: 400;
-      line-height: 1.1;
-      color: var(--fg);
-      opacity: 0;
-      animation: f-up 0.8s ease 0.35s forwards;
-    }
-
-    .sec em {
-      font-style: italic;
-      font-weight: 600;
-      color: var(--gold);
-    }
-  </style>
 </BaseLayout>
