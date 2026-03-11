@@ -11,7 +11,7 @@ export const portfolioProjects = [
     tags: ['Marketing', 'AR', 'Social Media', 'Campaña USA'],
     featured: true,
     gridSize: 'lg',
-    image: '/assets/img/marriott.svg'
+    image: '/assets/img/portfolio-marriott.jpg'
   },
   {
     id: 'banco-gabo',
@@ -25,7 +25,7 @@ export const portfolioProjects = [
     tags: ['Museografía', 'Gestión Cultural', 'Comunicación'],
     featured: true,
     gridSize: 'sm',
-    image: '/assets/img/banco-republica.png'
+    image: '/assets/img/portfolio-durero.jpg'
   },
   {
     id: 'diseño-generativo',
@@ -39,7 +39,7 @@ export const portfolioProjects = [
     tags: ['Investigación', 'IA', 'Académico', 'Humanidades Digitales'],
     featured: true,
     gridSize: 'sm',
-    image: '/assets/img/Acapulco_Chair.jpg'
+    image: '/assets/img/portfolio-investigacion.jpg'
   },
   {
     id: 'escuela-gobierno',
@@ -53,7 +53,7 @@ export const portfolioProjects = [
     tags: ['Campaña Digital', 'Diseño Web', 'Comunicación'],
     featured: true,
     gridSize: 'lg',
-    image: '/assets/img/uniandes.png'
+    image: '/assets/img/portfolio-educativo.jpg'
   },
   {
     id: 'modulario',
@@ -67,7 +67,7 @@ export const portfolioProjects = [
     tags: ['Diseño Participativo', 'Impacto Social', 'Producto'],
     featured: true,
     gridSize: 'md',
-    image: '/assets/img/ipes.png'
+    image: '/assets/img/portfolio-modulario.jpg'
   },
   {
     id: 'durero',
@@ -81,7 +81,7 @@ export const portfolioProjects = [
     tags: ['Diseño UX/UI', 'Web App', 'Cultural'],
     featured: true,
     gridSize: 'md',
-    image: '/assets/img/banco-republica.png'
+    image: '/assets/img/portfolio-durero.jpg'
   }
 ];
 
