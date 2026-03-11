@@ -11,7 +11,7 @@ export const portfolioProjects = [
     tags: ['Marketing', 'AR', 'Social Media', 'Campaña USA'],
     featured: true,
     gridSize: 'lg',
-    image: '/assets/img/portfolio-marriott.jpg'
+    image: '/assets/img/portal-to-paradise.png'
   },
   {
     id: 'banco-gabo',
