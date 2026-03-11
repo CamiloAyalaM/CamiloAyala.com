@@ -1,0 +1,143 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+}
+
+const {
+  title = 'Camilo Ayala Monje — Diseño Estratégico, Marketing & Comunicación Digital',
+  description = 'Diseñador estratégico, profesor e investigador en diseño, marketing, tecnología, humanidades y comunicación digital. 12+ años creando experiencias que conectan marcas, instituciones y personas. Bogotá, Colombia.',
+  image = '/assets/img/camilo-photo.jpg',
+  url = 'https://camiloayala.com'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, url);
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="keywords" content="diseño estratégico, marketing digital, comunicación, IA, diseño generativo, UX/UI, profesor, bogotá" />
+  <meta name="author" content="Camilo Ayala Monje" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL.toString()} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={new URL(image, url).toString()} />
+  <meta property="og:site_name" content="Camilo Ayala Monje" />
+  <meta property="og:locale" content="es_ES" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={canonicalURL.toString()} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content={new URL(image, url).toString()} />
+  <meta property="twitter:creator" content="@camiloayalam" />
+  
+  <!-- LinkedIn -->
+  <meta property="linkedin:title" content={title} />
+  <meta property="linkedin:description" content={description} />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href={canonicalURL.toString()} />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="/assets/img/camilo-ayala.webp" />
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Camilo Ayala Monje",
+    "jobTitle": "Diseñador Estratégico & Profesor",
+    "url": "https://camiloayala.com",
+    "image": "https://camiloayala.com/assets/img/camilo-photo.jpg",
+    "sameAs": [
+      "https://linkedin.com/in/camiloayalam",
+      "https://behance.net/camiloayala",
+      "https://orcid.org/0000-0002-3485-718X"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Universidad El Bosque"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bogotá",
+      "addressRegion": "DC",
+      "addressCountry": "CO"
+    },
+    "email": "camiloayalamonje@gmail.com",
+    "knowsAbout": [
+      "Diseño Estratégico",
+      "Marketing Digital",
+      "Comunicación",
+      "UX/UI",
+      "Diseño Generativo",
+      "IA",
+      "Docencia",
+      "Design Thinking"
+    ]
+  }
+  </script>
+  
+  <title>{title}</title>
+</head>
+
+<body>
+  <div id="cur"></div><div id="curl"></div>
+  <slot />
+  
+  <script>
+    // Custom cursor
+    const cur = document.getElementById('cur');
+    const curl = document.getElementById('curl');
+    let rx = 0, ry = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+      cur.style.left = e.clientX + 'px';
+      cur.style.top = e.clientY + 'px';
+      rx += (e.clientX - rx) * 0.1;
+      ry += (e.clientY - ry) * 0.1;
+    });
+    
+    (function animate() {
+      curl.style.left = rx + 'px';
+      curl.style.top = ry + 'px';
+      requestAnimationFrame(animate);
+    })();
+    
+    // Hover effects on interactive elements
+    document.querySelectorAll('a, button, .cl-item, .pc, .srv-card, .li-card, .atag, .cert, .edu-card').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cur.style.width = '13px';
+        cur.style.height = '13px';
+        curl.style.width = '46px';
+        curl.style.height = '46px';
+      });
+      el.addEventListener('mouseleave', () => {
+        cur.style.width = '7px';
+        cur.style.height = '7px';
+        curl.style.width = '30px';
+        curl.style.height = '30px';
+      });
+    });
+  </script>
+</body>
+</html>

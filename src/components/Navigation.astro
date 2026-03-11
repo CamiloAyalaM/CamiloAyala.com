@@ -1,0 +1,143 @@
+---
+---
+
+<nav id="nav">
+  <a href="/" class="nav-logo">
+    <img src="/assets/img/camilo-ayala.webp" alt="Camilo Ayala" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre mí</a></li>
+    <li><a href="#portafolio">Portafolio</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a href="#contacto" class="nav-cta">Hablemos</a>
+</nav>
+
+<style>
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px var(--edge);
+    background: rgba(13, 11, 9, 0.97);
+    backdrop-filter: blur(20px) saturate(160%);
+    border-bottom: 1px solid var(--dline);
+    transition: padding 0.38s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  nav.compact {
+    padding: 14px var(--edge);
+  }
+
+  .nav-logo img {
+    height: 27px;
+    width: auto;
+    filter: invert(1);
+    transition: opacity 0.25s;
+  }
+
+  .nav-logo:hover img {
+    opacity: 0.7;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 38px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(244, 240, 232, 0.38);
+    text-decoration: none;
+    transition: color 0.2s;
+    position: relative;
+    padding-bottom: 4px;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.28s ease;
+  }
+
+  .nav-links a:hover {
+    color: rgba(244, 240, 232, 0.85);
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  .nav-cta {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.11em;
+    color: var(--ink);
+    background: var(--gold);
+    padding: 9px 24px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+    cursor: pointer;
+    border: none;
+  }
+
+  .nav-cta:hover {
+    background: var(--goldt);
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      padding: 16px var(--edge);
+    }
+
+    .nav-links {
+      gap: 20px;
+      font-size: 9px;
+    }
+
+    .nav-cta {
+      padding: 8px 16px;
+      font-size: 9px;
+    }
+  }
+</style>
+
+<script>
+  const nav = document.getElementById('nav');
+  const navHeight = nav?.offsetHeight || 70;
+
+  let lastScrollY = 0;
+  let isCompact = false;
+
+  document.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const shouldBeCompact = scrollY > navHeight * 2;
+
+    if (shouldBeCompact && !isCompact) {
+      nav?.classList.add('compact');
+      isCompact = true;
+    } else if (!shouldBeCompact && isCompact) {
+      nav?.classList.remove('compact');
+      isCompact = false;
+    }
+
+    lastScrollY = scrollY;
+  });
+</script>

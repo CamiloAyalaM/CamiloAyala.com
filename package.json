@@ -1,0 +1,18 @@
+{
+  "name": "camiloayala-astro",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Camilo Ayala - Diseño Estratégico, Marketing & Comunicación Digital",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.4.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.0"
+  }
+}
