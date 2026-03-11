@@ -25,7 +25,7 @@ export const portfolioProjects = [
     tags: ['Museografía', 'Gestión Cultural', 'Comunicación'],
     featured: true,
     gridSize: 'sm',
-    image: '/assets/img/portfolio-durero.jpg'
+    image: '/assets/img/celebrando-a-gabo.webp'
   },
   {
     id: 'diseño-generativo',
