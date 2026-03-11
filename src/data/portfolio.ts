@@ -81,7 +81,7 @@ export const portfolioProjects = [
     tags: ['Diseño UX/UI', 'Web App', 'Cultural'],
     featured: true,
     gridSize: 'md',
-    image: '/assets/img/portfolio-durero.jpg'
+    image: '/assets/img/durero.jpg'
   }
 ];
 
