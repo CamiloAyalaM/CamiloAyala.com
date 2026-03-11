@@ -39,7 +39,7 @@ export const portfolioProjects = [
     tags: ['Investigación', 'IA', 'Académico', 'Humanidades Digitales'],
     featured: true,
     gridSize: 'sm',
-    image: '/assets/img/portfolio-investigacion.jpg'
+    image: '/assets/img/Acapulco_Chair.jpg'
   },
   {
     id: 'escuela-gobierno',
