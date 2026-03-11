@@ -199,7 +199,7 @@ export const clients = [
   { name: 'NOBOX', logo: '/assets/img/nbx.jpg', bg: 'white', scale: 1.3 },
   { name: 'IPES Bogotá', logo: '/assets/img/ipes.png', bg: 'white' },
   { name: 'U. El Bosque', logo: '/assets/img/logoUniversidadElBosque.png', bg: 'white' },
-  { name: 'Colegio Marymount', logo: '/assets/img/marymount.png', bg: '#1B2F6E' },
+  { name: 'Colegio Marymount', logo: '/assets/img/colegio-marymount.jpg', bg: 'white' },
   { name: 'MUZO Emerald', logo: '/assets/img/muzo.png', bg: 'white' },
   { name: 'U. Sergio Arboleda', logo: '/assets/img/sergio-arboleda-university.png', bg: 'white' }
 ];
