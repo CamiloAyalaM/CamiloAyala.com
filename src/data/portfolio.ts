@@ -192,16 +192,16 @@ export const aboutTags = [
 ];
 
 export const clients = [
-  { name: 'Nokia USA', logo: '/assets/img/nokia.png', bg: '#124191' },
+  { name: 'Nokia USA', logo: '/assets/img/nokia-usa.png', bg: 'white' },
   { name: 'Marriott Rewards', logo: '/assets/img/marriott.svg', bg: 'white' },
   { name: 'Banco de la República', logo: '/assets/img/banco-republica.png', bg: 'white' },
-  { name: 'Uniandes', logo: '/assets/img/uniandes.png', bg: 'white' },
-  { name: 'NOBOX', logo: '/assets/img/nobox.png', bg: '#1a1714' },
+  { name: 'Uniandes', logo: '/assets/img/logo-uniandes.png', bg: 'white' },
+  { name: 'NOBOX', logo: '/assets/img/nbx.jpg', bg: 'white', scale: 1.3 },
   { name: 'IPES Bogotá', logo: '/assets/img/ipes.png', bg: 'white' },
-  { name: 'U. El Bosque', logo: '/assets/img/el-bosque.png', bg: 'white' },
+  { name: 'U. El Bosque', logo: '/assets/img/logoUniversidadElBosque.png', bg: 'white' },
   { name: 'Colegio Marymount', logo: '/assets/img/marymount.png', bg: '#1B2F6E' },
   { name: 'MUZO Emerald', logo: '/assets/img/muzo.png', bg: 'white' },
-  { name: 'U. Sergio Arboleda', logo: '/assets/img/sergio-arboleda.png', bg: 'white' }
+  { name: 'U. Sergio Arboleda', logo: '/assets/img/sergio-arboleda-university.png', bg: 'white' }
 ];
 
 export const skillCategories = [

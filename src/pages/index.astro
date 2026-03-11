@@ -196,7 +196,7 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
       {clients.map((client, i) => (
         <div class="cl-item rv" style={`transition-delay: ${i * 0.04}s`}>
           <div class="cl-logo" style={`background: ${client.bg}`}>
-            <img src={client.logo} alt={client.name} loading="lazy" />
+            <img src={client.logo} alt={client.name} loading="lazy" style={client.scale ? `transform: scale(${client.scale})` : ''} />
           </div>
           <span class="cl-name">{client.name}</span>
         </div>
