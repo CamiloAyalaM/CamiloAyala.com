@@ -1,81 +1,87 @@
 export const portfolioProjects = [
   {
-    id: 'marriott-rewards',
-    title: 'Marriott Rewards',
-    category: 'Marketing Digital · Estrategia',
-    client: 'Marriott Caribbean',
-    description: 'Estrategia de contenido y engagement para la plataforma de lealtad de Marriott. Campaña dirigida a público norteamericano con enfoque en experiencias de viaje premium.',
-    metrics: '4.1M impresiones · 15K interacciones · +340% ROI',
-    role: 'Estrategia de contenido, copywriting, analítica',
-    year: '2023',
-    tags: ['Marketing', 'Estrategia', 'SEM/SEO', 'Copywriting'],
+    id: 'marriott-portal',
+    title: 'Portal to Paradise',
+    category: 'Campaña · Realidad Aumentada · USA',
+    client: 'Marriott Caribbean & Mexico Resorts',
+    description: 'Producción de comercial, social media advertising para USA y app en AR nativa para iOS. Experiencia inmersiva de destinos caribeños post-huracanes 2017.',
+    metrics: '4.1M impresiones · 221K earned media · 2.5K app downloads',
+    role: 'Producción de comercial, social media advertising, app en AR',
+    year: '2018',
+    tags: ['Marketing', 'AR', 'Social Media', 'Campaña USA'],
     featured: true,
+    gridSize: 'lg',
     image: '/assets/img/portfolio-marriott.jpg'
   },
   {
-    id: 'banco-republica',
-    title: 'Exposición Durero 1496-1522',
-    category: 'Divulgación Cultural · Web App',
-    client: 'Banco de la República · Museo de Arte',
-    description: 'Micrositio, app de obras con zoom en alta resolución, postales conmemorativas y campaña de divulgación nacional. Ganador del reconocimiento institucional por impacto cultural.',
-    metrics: '115.000 visitantes · App con 50K descargas',
-    role: 'Concepto, diseño UX/UI, estrategia de divulgación',
+    id: 'banco-gabo',
+    title: 'Celebrando a Gabo',
+    category: 'Gestión Cultural · Museografía · 29 ciudades',
+    client: 'Banco de la República',
+    description: 'Museografía Sala Obregón BLAA, fachadas, línea de tiempo offline/online e intervención artística en plazoleta.',
+    metrics: '37.5K visitantes web · 218 menciones · alianza EFE & El Espectador',
+    role: 'Diseño museográfico, comunicación digital, estrategia de divulgación',
     year: '2014',
-    tags: ['Diseño UX/UI', 'Divulgación', 'Web App', 'Cultural'],
+    tags: ['Museografía', 'Gestión Cultural', 'Comunicación'],
     featured: true,
+    gridSize: 'sm',
     image: '/assets/img/portfolio-durero.jpg'
+  },
+  {
+    id: 'diseño-generativo',
+    title: 'Diseño Generativo',
+    category: 'Investigación · IA & Diseño Computacional',
+    client: 'U. de los Andes · ECADE2022 Oporto',
+    description: 'Tesis de Magíster y paper. Co-creación entre diseñador y pensamiento computacional. Diseño paramétrico con Autodesk Fusion.',
+    metrics: '+770 consultas · +250 descargas · ponencia IAFOR Portugal',
+    role: 'Investigación, escritura, presentación',
+    year: '2021–2022',
+    tags: ['Investigación', 'IA', 'Académico', 'Humanidades Digitales'],
+    featured: true,
+    gridSize: 'sm',
+    image: '/assets/img/portfolio-investigacion.jpg'
+  },
+  {
+    id: 'escuela-gobierno',
+    title: 'Gobernar en la Era de los Datos',
+    category: 'Campaña Digital · Foro Internacional',
+    client: 'Escuela de Gobierno · U. de los Andes',
+    description: 'Diseño web, campaña digital e impresa, videos y mailing para foro sobre gobernanza de datos y política pública.',
+    metrics: '+10K usuarios únicos · +27K visitas · +500 asistentes',
+    role: 'Diseño web, campaña digital, estrategia de comunicación',
+    year: '2018',
+    tags: ['Campaña Digital', 'Diseño Web', 'Comunicación'],
+    featured: true,
+    gridSize: 'lg',
+    image: '/assets/img/portfolio-educativo.jpg'
   },
   {
     id: 'modulario',
     title: 'MODULARIO',
-    category: 'Diseño Participativo · Sistema Modular',
-    client: 'Proyecto de Impacto Social · Bogotá',
-    description: 'Sistema modular para vendedores ambulantes de Bogotá. Diseño participativo que integró la voz de 40+ vendedores de economía informal. Finalist en Design for Social Innovation.',
-    metrics: '40+ usuarios activos · +92% satisfacción',
+    category: 'Diseño de Producto · Economía Social',
+    client: 'IPES Bogotá · U. de los Andes',
+    description: 'Carro modular para vendedores de economía informal. 2 talleres participativos. Publicado en Ediciones Uniandes.',
+    metrics: 'Pabellón ArqDis 2023 · ISBN 978-958-798-711-9',
     role: 'Investigación participativa, diseño de sistema, iteración con usuarios',
-    year: '2019',
-    tags: ['Diseño Participativo', 'Impacto Social', 'Sistemas de Diseño'],
+    year: '2022',
+    tags: ['Diseño Participativo', 'Impacto Social', 'Producto'],
     featured: true,
+    gridSize: 'md',
     image: '/assets/img/portfolio-modulario.jpg'
   },
   {
-    id: 'nokia-usa',
-    title: 'Nokia USA — Estrategia Digital',
-    category: 'Consultoría · Comunicación Digital',
-    client: 'Nokia USA',
-    description: 'Consultoría en comunicación digital y posicionamiento de marca. Estrategia multi-canal para mercado norteamericano, enfoque en B2B tech.',
-    metrics: 'Posicionamiento mejorado · Comunicación integrada',
-    role: 'Estrategia, concepto creativo, ejecución',
-    year: '2022',
-    tags: ['Consultoría', 'Estrategia', 'B2B Tech'],
-    featured: false,
-    image: '/assets/img/portfolio-nokia.jpg'
-  },
-  {
-    id: 'diseño-generativo',
-    title: 'Investigación: Diseño Generativo & IA',
-    category: 'Investigación Académica · Publicación',
-    client: 'Universidad de Los Andes · ECADE2022',
-    description: 'Tesis de Magíster sobre co-creación y diseño asistido por IA. Publicada en ECADE2022, Oporto, Portugal. Investigación que vincula humanidades digitales, diseño generativo e impacto social.',
-    metrics: 'Publicación internacional · 847 citas en LinkedIn',
-    role: 'Investigación, escritura, presentación',
-    year: '2022',
-    tags: ['Investigación', 'IA', 'Académico', 'Humanidades Digitales'],
-    featured: false,
-    image: '/assets/img/portfolio-investigacion.jpg'
-  },
-  {
-    id: 'estrategia-educativa',
-    title: 'Estrategia de Marketing Educativo',
-    category: 'Marketing Educativo · Comunicación Digital',
-    client: 'Universidad de Los Andes',
-    description: 'Estrategia integral de marketing educativo. Redefinición de propuesta de valor, campaña de admisiones, brand positioning y comunidad digital.',
-    metrics: '+20% inscripciones · +40% tráfico · +75% engagement RRSS',
-    role: 'Estrategia, concepto creativo, ejecución',
-    year: '2021-2023',
-    tags: ['Marketing Educativo', 'Estrategia', 'Comunicación'],
+    id: 'durero',
+    title: 'Exposición Durero 1496–1522',
+    category: 'Divulgación Cultural · Web App',
+    client: 'Banco de la República · Museo de Arte',
+    description: 'Micrositio, app de obras con zoom en alta resolución, postales conmemorativas y campaña de divulgación nacional.',
+    metrics: '115.000 visitantes · micrositio + app web HD',
+    role: 'Concepto, diseño UX/UI, estrategia de divulgación',
+    year: '2014',
+    tags: ['Diseño UX/UI', 'Web App', 'Cultural'],
     featured: true,
-    image: '/assets/img/portfolio-educativo.jpg'
+    gridSize: 'md',
+    image: '/assets/img/portfolio-durero.jpg'
   }
 ];
 
@@ -128,13 +134,13 @@ export const credentials = [
   {
     number: '01',
     title: 'Magíster en Diseño — U. de los Andes',
-    subtitle: 'Enfoque en mercadeo y Humanidades Digitales',
+    subtitle: 'Enfoque en mercadeo · Humanidades Digitales · Diseño generativo e IA',
     description: 'Investigación sobre diseño generativo, IA y co-creación. Intersección entre tecnología, humanidades digitales y diseño. Archivos digitales y colecciones.'
   },
   {
     number: '02',
     title: 'Ponente internacional · ECADE2022, Oporto',
-    subtitle: 'Diseño generativo y co-creación con IA',
+    subtitle: 'Diseño generativo y co-creación con IA · IAFOR',
     description: 'Presentación sobre "Diseño Generativo como herramienta de co-creación en contextos de economía informal". Publicación peer-reviewed.'
   },
   {
@@ -159,9 +165,43 @@ export const credentials = [
 
 export const highlights = [
   { number: '12+', label: 'Años de\nexperiencia' },
-  { number: '10+', label: 'Clientes int\'l\nde consultoría' },
-  { number: '4.1M', label: 'Impresiones\en campañas USA' },
+  { number: '10+', label: "Clientes int'l\nconsultoría" },
+  { number: '4.1M', label: 'Impresiones\ncampañas USA' },
   { number: '5K', label: 'Seguidores\nen LinkedIn' }
+];
+
+export const certifications = [
+  { name: 'Marketing Digital', issuer: 'HubSpot Academy', year: '2026' },
+  { name: 'Google Analytics Certification', issuer: 'Google Skillshop', year: '2025' },
+  { name: 'Analíticas de Marketing Digital', issuer: 'Tec de Monterrey', year: '2025' },
+  { name: 'Marketing con Redes Sociales', issuer: 'Tec de Monterrey', year: '2025' },
+  { name: 'Humanidades Digitales: Archivos y Colecciones', issuer: 'U. de los Andes', year: '2025' },
+  { name: 'Marketing Verde', issuer: 'U. de los Andes', year: '2025' },
+  { name: 'Práctica Constructivista en el Aula', issuer: 'PUC Chile', year: '2025' },
+  { name: 'Social & Behavioral Research: Human Subjects', issuer: 'CITI Program', year: '2025' },
+  { name: 'Responsible Conduct of Research', issuer: 'CITI Program', year: '2025' },
+  { name: 'Conflicts of Interest in Research', issuer: 'CITI Program', year: '2025' },
+  { name: 'Google Analytics Individual Qualification', issuer: 'Google Skillshop', year: '2024' },
+  { name: 'Programa Avanzado de Marketing', issuer: 'CESA', year: '2019' }
+];
+
+export const aboutTags = [
+  'Diseño Estratégico', 'Marketing Digital', 'UX / UI', 'Comunicación Digital',
+  'IA Aplicada', 'Docencia', 'Design Thinking', 'CRM · Salesforce',
+  'Humanidades Digitales', 'Tecnología'
+];
+
+export const clients = [
+  { name: 'Nokia USA', logo: '/assets/img/nokia.png', bg: '#124191' },
+  { name: 'Marriott Rewards', logo: '/assets/img/marriott.svg', bg: 'white' },
+  { name: 'Banco de la República', logo: '/assets/img/banco-republica.png', bg: 'white' },
+  { name: 'Uniandes', logo: '/assets/img/uniandes.png', bg: 'white' },
+  { name: 'NOBOX', logo: '/assets/img/nobox.png', bg: '#1a1714' },
+  { name: 'IPES Bogotá', logo: '/assets/img/ipes.png', bg: 'white' },
+  { name: 'U. El Bosque', logo: '/assets/img/el-bosque.png', bg: 'white' },
+  { name: 'Colegio Marymount', logo: '/assets/img/marymount.png', bg: '#1B2F6E' },
+  { name: 'MUZO Emerald', logo: '/assets/img/muzo.png', bg: 'white' },
+  { name: 'U. Sergio Arboleda', logo: '/assets/img/sergio-arboleda.png', bg: 'white' }
 ];
 
 export const skillCategories = [
@@ -181,17 +221,4 @@ export const skillCategories = [
     category: 'Educación & Liderazgo',
     skills: ['Docencia Universitaria', 'Mentoría', 'Gestión de Proyectos', 'Liderazgo Adaptativo', 'Comunicación Asertiva', 'Investigación Aplicada']
   }
-];
-
-export const clients = [
-  { name: 'Nokia USA', logo: '/assets/img/nokia.png', bg: '#124191' },
-  { name: 'Marriott Rewards', logo: '/assets/img/marriott.svg', bg: 'white' },
-  { name: 'Banco de la República', logo: '/assets/img/banco-republica.png', bg: 'white' },
-  { name: 'Uniandes', logo: '/assets/img/uniandes.png', bg: 'white' },
-  { name: 'NOBOX', logo: '/assets/img/nobox.png', bg: '#1a1714' },
-  { name: 'IPES Bogotá', logo: '/assets/img/ipes.png', bg: 'white' },
-  { name: 'U. El Bosque', logo: '/assets/img/el-bosque.png', bg: 'white' },
-  { name: 'Colegio Marymount', logo: '/assets/img/marymount.png', bg: '#1B2F6E' },
-  { name: 'MUZO Emerald', logo: '/assets/img/muzo.png', bg: 'white' },
-  { name: 'U. Sergio Arboleda', logo: '/assets/img/sergio-arboleda.png', bg: 'white' }
 ];
