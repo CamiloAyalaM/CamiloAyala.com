@@ -1,0 +1,166 @@
+---
+import { highlights } from '../../data/portfolio';
+---
+
+<section class="hero" id="inicio">
+  <div class="noise"></div>
+  <div class="hero-left">
+    <div class="eyebrow">
+      <span class="ey-dash"></span>
+      <span class="ey-txt">Bogotá · Colombia</span>
+    </div>
+    <h1 class="h1">
+      Donde el <em>diseño</em><br>
+      se convierte<br>
+      en <em>experiencia.</em>
+    </h1>
+    <p class="hero-desc">
+      <strong>Diseñador estratégico, profesor e investigador</strong> en diseño, marketing,
+      tecnología, humanidades y comunicación digital. Más de 12 años creando experiencias
+      que conectan marcas, instituciones y personas.
+    </p>
+    <div class="hero-btns">
+      <a href="#contacto" class="btn-g">Hablemos &rarr;</a>
+      <a href="https://linkedin.com/in/camiloayalam" target="_blank" rel="noopener" class="btn-o">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        Seguir en LinkedIn
+      </a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo"></div>
+    <div class="hero-badge">
+      <div class="b-label">Ponente Internacional</div>
+      <div class="b-val">ECADE2022 · Oporto</div>
+      <div class="b-sub">Diseño generativo e IA</div>
+    </div>
+  </div>
+</section>
+
+<div class="mq-wrap" aria-hidden="true">
+  <div class="mq-track">
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Diseño Estratégico</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Comunicación Digital</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Personal Branding</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">SEO &amp; SEM</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Diseño Generativo</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">UX / UI</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">CRM &amp; Salesforce</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Design Thinking</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Docencia Universitaria</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">IA Aplicada al Diseño</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Análisis de Datos</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Humanidades Digitales</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Marketing Digital</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Branding Editorial</span></div>
+    <!-- duplicate for seamless loop -->
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Diseño Estratégico</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Comunicación Digital</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Personal Branding</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">SEO &amp; SEM</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Diseño Generativo</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">UX / UI</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">CRM &amp; Salesforce</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Design Thinking</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Docencia Universitaria</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">IA Aplicada al Diseño</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Análisis de Datos</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Humanidades Digitales</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Marketing Digital</span></div>
+    <div class="mq-item"><span class="mq-dot"></span><span class="mq-txt">Branding Editorial</span></div>
+  </div>
+</div>
+
+<div class="highlights">
+  {highlights.map((h, i) => (
+    <div class="hl rv" style={`transition-delay: ${i * 0.09}s`}>
+      <div class="hl-n">{h.number}</div>
+      <div class="hl-l">{h.label}</div>
+    </div>
+  ))}
+</div>
+
+<style>
+  /* ============================================
+     MARQUEE
+  ============================================ */
+  .mq-wrap {
+    border-top: 1px solid var(--dline);
+    border-bottom: 1px solid var(--dline);
+    padding: 15px 0;
+    overflow: hidden;
+    background: var(--ink);
+    position: relative;
+    z-index: 5;
+  }
+  .mq-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-mq 40s linear infinite;
+    will-change: transform;
+  }
+  .mq-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 36px;
+    white-space: nowrap;
+  }
+  .mq-dot {
+    width: 3px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+    opacity: .7;
+  }
+  .mq-txt {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: rgba(140,130,118,.5);
+  }
+
+  /* ============================================
+     HIGHLIGHTS — gold strip
+  ============================================ */
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: var(--gold);
+  }
+  .hl {
+    padding: 54px 38px;
+    text-align: center;
+    border-right: 1px solid rgba(13,11,9,.12);
+  }
+  .hl:last-child { border-right: none; }
+  .hl-n {
+    font-family: var(--serif);
+    font-size: clamp(40px, 4.4vw, 64px);
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .hl-n sup { font-size: .45em; vertical-align: super; }
+  .hl-l {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: rgba(13,11,9,.45);
+    margin-top: 10px;
+    line-height: 1.5;
+    white-space: pre-line;
+  }
+
+  /* ============================================
+     RESPONSIVE
+  ============================================ */
+  @media (max-width: 1024px) {
+    .highlights { grid-template-columns: repeat(2, 1fr); }
+    .hl:nth-child(even) { border-right: none; }
+    .hl:nth-child(n+3) { border-top: 1px solid rgba(13,11,9,.12); }
+  }
+</style>

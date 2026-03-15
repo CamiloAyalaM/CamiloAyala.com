@@ -1,0 +1,144 @@
+---
+---
+
+<section class="cta-sec" id="contacto">
+  <div class="cta-l rv-l">
+    <div class="s-tag"><div class="s-line"></div><span class="s-txt">Contacto</span></div>
+    <h2 class="sec">Trabajemos<br><em>juntos.</em></h2>
+    <p class="cta-body">Estoy disponible para consultoría, proyectos de diseño estratégico, marketing digital y talleres formativos. Hablemos sobre tu próximo proyecto.</p>
+  </div>
+  <div class="cta-r rv">
+    <div class="cta-links">
+      <a href="mailto:camiloayalamonje@gmail.com" class="cta-link">
+        <span>Email directo</span>
+        <div class="cta-meta">
+          <span class="cta-badge">Disponible</span>
+          <span class="cta-arr">&rarr;</span>
+        </div>
+      </a>
+      <a href="https://linkedin.com/in/camiloayalam" target="_blank" rel="noopener" class="cta-link">
+        <span>LinkedIn</span>
+        <div class="cta-meta">
+          <span class="cta-badge">5K+</span>
+          <span class="cta-arr">&rarr;</span>
+        </div>
+      </a>
+      <a href="https://behance.net/camiloayala" target="_blank" rel="noopener" class="cta-link">
+        <span>Behance</span>
+        <div class="cta-meta">
+          <span class="cta-arr">&rarr;</span>
+        </div>
+      </a>
+      <a href="https://orcid.org/0000-0002-3485-718X" target="_blank" rel="noopener" class="cta-link">
+        <span>ORCID</span>
+        <div class="cta-meta">
+          <span class="cta-arr">&rarr;</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <a href="/" class="f-logo"><img src="/assets/img/camilo-ayala.webp" alt="Camilo Ayala" /></a>
+  <p class="f-copy">&copy; 2025 Camilo Ayala Monje &middot; Bogotá, Colombia</p>
+  <ul class="f-links">
+    <li><a href="https://linkedin.com/in/camiloayalam" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a href="https://behance.net/camiloayala" target="_blank" rel="noopener">Behance</a></li>
+    <li><a href="https://orcid.org/0000-0002-3485-718X" target="_blank" rel="noopener">ORCID</a></li>
+  </ul>
+</footer>
+
+<style>
+  /* ============================================
+     CTA — 2-column links list
+  ============================================ */
+  .cta-sec {
+    padding: 124px var(--edge);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 88px;
+    align-items: center;
+    background: var(--cream);
+    border-top: 1px solid var(--line);
+  }
+  .cta-body {
+    font-size: 15.5px;
+    line-height: 1.85;
+    color: var(--fg2);
+    margin-top: 28px;
+  }
+  .cta-links { display: flex; flex-direction: column; }
+  .cta-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--serif);
+    font-size: 23px;
+    font-weight: 600;
+    color: var(--fg);
+    text-decoration: none;
+    transition: color .22s, padding-left .28s;
+  }
+  .cta-link:hover { color: var(--gold); padding-left: 10px; }
+  .cta-meta { display: flex; align-items: center; gap: 11px; flex-shrink: 0; }
+  .cta-badge {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: var(--gold08);
+    padding: 3px 10px;
+    border: 1px solid var(--gold15);
+  }
+  .cta-arr {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    transition: color .22s, transform .28s;
+  }
+  .cta-link:hover .cta-arr { color: var(--gold); transform: translateX(5px); }
+
+  /* ============================================
+     FOOTER
+  ============================================ */
+  .footer {
+    padding: 36px var(--edge);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--ink);
+    border-top: 1px solid var(--dline);
+  }
+  .f-logo img { height: 22px; filter: invert(1) brightness(1) opacity(.36); transition: filter .22s; }
+  .f-logo:hover img { filter: invert(1) brightness(1) opacity(.7); }
+  .f-copy { font-family: var(--mono); font-size: 10px; color: rgba(140,130,118,.32); letter-spacing: .05em; }
+  .f-links { display: flex; gap: 26px; list-style: none; }
+  .f-links a {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(140,130,118,.42);
+    text-decoration: none;
+    transition: color .22s;
+  }
+  .f-links a:hover { color: var(--gold); }
+
+  /* ============================================
+     RESPONSIVE
+  ============================================ */
+  @media (max-width: 1140px) {
+    .cta-sec { padding-left: 32px; padding-right: 32px; }
+  }
+  @media (max-width: 1024px) {
+    .cta-sec { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 768px) {
+    .cta-sec { padding: 80px 20px; }
+    .footer { flex-direction: column; gap: 16px; text-align: center; padding: 28px 20px; }
+  }
+</style>

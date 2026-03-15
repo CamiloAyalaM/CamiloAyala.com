@@ -1,0 +1,243 @@
+---
+import { portfolioProjects, clients } from '../../data/portfolio';
+
+const featuredProjects = portfolioProjects.filter(p => p.featured);
+---
+
+<section class="portfolio-sec" id="portafolio">
+  <div class="port-head">
+    <div class="rv-l">
+      <div class="s-tag"><div class="s-line"></div><span class="s-txt">Portafolio</span></div>
+      <h2 class="sec">Proyectos<br>con <em>impacto.</em></h2>
+    </div>
+    <p class="port-intro rv">Selección de campañas, investigaciones y proyectos de diseño estratégico con resultados medibles. Pasa el cursor sobre cada proyecto para ver descripción y métricas.</p>
+  </div>
+  <div class="port-grid">
+    {featuredProjects.map((project, i) => (
+      <div class={`pc rv pc-${project.gridSize}`} style={`transition-delay: ${i * 0.06}s`}>
+        <div class="pc-img">
+          <img class="pc-bg" src={project.image} alt={`${project.title} — ${project.client}`} loading="lazy" />
+          <div class="pc-over">
+            <div class="pc-cat">{project.category}</div>
+            <div class="pc-title">{project.title}</div>
+            <div class="pc-client">{project.client}</div>
+          </div>
+        </div>
+        <div class="pc-desc">
+          <div class="pc-metric">{project.metrics}</div>
+          <div class="pc-role">{project.description}</div>
+          <div class="pc-date">{project.client} · {project.year}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<div class="clients-sec">
+  <div class="cl-hd rv">Organizaciones con las que he trabajado</div>
+  <div class="cl-grid">
+    {clients.map((client, i) => (
+      <div class="cl-item rv" style={`transition-delay: ${i * 0.04}s`}>
+        <div class="cl-logo" style={`background: ${client.bg}`}>
+          <img src={client.logo} alt={client.name} loading="lazy" style={client.scale ? `transform: scale(${client.scale})` : ''} />
+        </div>
+        <span class="cl-name">{client.name}</span>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  /* ============================================
+     PORTFOLIO — 12-col asymmetric
+  ============================================ */
+  .portfolio-sec {
+    padding: 124px var(--edge);
+    background: var(--warm);
+  }
+  .port-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 88px;
+    margin-bottom: 68px;
+    align-items: end;
+  }
+  .port-intro { font-size: 15.5px; line-height: 1.85; color: var(--fg2); }
+  .port-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 18px;
+  }
+  .pc {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--ink2);
+  }
+  .pc-lg { grid-column: span 7; }
+  .pc-sm { grid-column: span 5; }
+  .pc-md { grid-column: span 6; }
+  .pc-img {
+    width: 100%;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    position: relative;
+  }
+  .pc-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform .8s cubic-bezier(.25,.46,.45,.94);
+  }
+  .pc:hover .pc-bg { transform: scale(1.065); }
+  .pc-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(13,11,9,.94) 0%, rgba(13,11,9,.3) 50%, transparent 100%);
+  }
+  .pc-over {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 28px;
+    z-index: 2;
+    transform: translateY(5px);
+    transition: transform .38s cubic-bezier(.25,.46,.45,.94);
+  }
+  .pc:hover .pc-over { transform: translateY(0); }
+  .pc-cat {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 5px;
+  }
+  .pc-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    color: #f4f0e8;
+    line-height: 1.18;
+  }
+  .pc-client { font-size: 11.5px; color: rgba(244,240,232,.38); margin-top: 4px; }
+  .pc-desc {
+    background: white;
+    border: 1px solid var(--line);
+    border-top: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .55s cubic-bezier(.25,.46,.45,.94), padding .38s ease;
+  }
+  .pc:hover .pc-desc { max-height: 160px; padding: 20px 28px 24px; }
+  .pc-metric {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--gold);
+    margin-bottom: 8px;
+    letter-spacing: .04em;
+  }
+  .pc-role { font-size: 13.5px; color: var(--fg2); line-height: 1.7; margin-bottom: 7px; }
+  .pc-date {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  /* ============================================
+     CLIENTS
+  ============================================ */
+  .clients-sec {
+    padding: 84px var(--edge);
+    background: var(--warm);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .cl-hd {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 44px;
+  }
+  .cl-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--line);
+  }
+  .cl-item {
+    background: var(--warm);
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    transition: background .22s;
+    min-height: 160px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cl-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform .32s ease;
+  }
+  .cl-item:hover { background: var(--cream); }
+  .cl-item:hover::after { transform: scaleX(1); }
+  .cl-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .22s, box-shadow .22s;
+    flex-shrink: 0;
+    padding: 8px;
+  }
+  .cl-item:hover .cl-logo { transform: scale(1.06); box-shadow: 0 4px 14px rgba(13,11,9,.12); }
+  .cl-logo img { width: 100%; height: 100%; object-fit: contain; }
+  .cl-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.38;
+    transition: color .22s;
+  }
+  .cl-item:hover .cl-name { color: var(--fg); }
+
+  /* ============================================
+     RESPONSIVE
+  ============================================ */
+  @media (max-width: 1140px) {
+    .portfolio-sec, .clients-sec { padding-left: 32px; padding-right: 32px; }
+  }
+  @media (max-width: 1024px) {
+    .port-head { grid-template-columns: 1fr; gap: 24px; }
+    .cl-grid { grid-template-columns: repeat(5, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .portfolio-sec, .clients-sec { padding: 80px 20px; }
+    .port-grid { grid-template-columns: 1fr; }
+    .pc-lg, .pc-sm, .pc-md { grid-column: span 1; }
+    .cl-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

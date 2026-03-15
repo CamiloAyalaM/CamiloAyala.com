@@ -201,6 +201,33 @@ nav.compact {
   will-change: auto;
 }
 
+/* SHARED SECTION ELEMENTS */
+.s-tag {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 16px;
+}
+.s-line { width: 22px; height: 1px; background: var(--gold); }
+.s-txt {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.sec {
+  font-family: var(--serif);
+  font-size: clamp(32px, 3.9vw, 54px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -.012em;
+  color: var(--fg);
+}
+.sec em { font-style: italic; font-weight: 600; color: var(--gold); }
+.sec.dk { color: rgba(244,240,232,.97); }
+.sec.dk em { color: var(--gold); }
+
 /* NOISE OVERLAY */
 .noise {
   position: absolute;

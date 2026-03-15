@@ -1,0 +1,235 @@
+---
+import { credentials, certifications, aboutTags } from '../../data/portfolio';
+---
+
+<section class="about-sec" id="sobre">
+  <div class="about-l rv-l">
+    <div class="s-tag"><div class="s-line"></div><span class="s-txt">Sobre mí</span></div>
+    <h2 class="sec">Pasión por el diseño,<br>la <em>tecnología</em><br>y la comunicación.</h2>
+    <div class="about-copy">
+      <p>Soy Camilo Ayala Monje, bogotano, apasionado por el <strong>diseño, la tecnología y la comunicación</strong>. Experto en mercadeo y comunicación en educación, empresa privada y sector público.</p>
+      <p>Mi trabajo integra <strong>Design Thinking, UX/UI, estrategias de comunicación digital, SEM, SEO, CRM</strong> y análisis de datos. <em>Magíster en Diseño</em> con enfoque en mercadeo y estudios en Humanidades Digitales por la Universidad de los Andes.</p>
+      <p>Me caracterizan el <strong>liderazgo adaptativo</strong>, la comunicación asertiva y la creatividad. Diseño experiencias memorables que impactan positivamente a las personas y las organizaciones.</p>
+    </div>
+    <div class="atags">
+      {aboutTags.map(tag => <span class="atag">{tag}</span>)}
+    </div>
+  </div>
+  <div class="about-r rv">
+    {credentials.map(c => (
+      <div class="cred">
+        <span class="cred-n">{c.number}</span>
+        <div>
+          <div class="cred-t">{c.title}</div>
+          <div class="cred-s">{c.subtitle}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="edu-sec" id="educacion">
+  <div class="edu-top">
+    <div class="s-tag rv"><div class="s-line"></div><span class="s-txt">Formación &amp; Autoridad</span></div>
+    <h2 class="sec rv" style="transition-delay:.06s">Educación &amp; <em>certificaciones.</em></h2>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card rv" style="transition-delay:.08s">
+      <div class="edu-yr">2019 – 2021</div>
+      <div class="edu-deg">Magíster en Diseño</div>
+      <div class="edu-sch">Universidad de los Andes · Bogotá</div>
+      <div class="edu-desc">Enfoque en mercadeo y co-creación computacional. Investigación sobre diseño generativo e IA. Intersección entre tecnología, humanidades digitales y diseño. Archivos digitales y colecciones.</div>
+      <span class="edu-badge">Titulado</span>
+    </div>
+    <div class="edu-card rv" style="transition-delay:.15s">
+      <div class="edu-yr">2004 – 2009</div>
+      <div class="edu-deg">Diseño Gráfico — B.F.A.</div>
+      <div class="edu-sch">Universidad Jorge Tadeo Lozano · Bogotá</div>
+      <div class="edu-desc">Formación de base en diseño visual, comunicación, tipografía y producción gráfica. Fundamento para una práctica profesional rigurosa y multidisciplinar.</div>
+      <span class="edu-badge">Titulado</span>
+    </div>
+  </div>
+  <div class="certs-block rv" style="transition-delay:.2s">
+    <div class="certs-hd">Certificaciones &amp; educación continua</div>
+    <div class="certs-wrap">
+      {certifications.map(cert => (
+        <div class="cert">
+          <span class="cert-name">{cert.name}</span>
+          <span class="cert-meta">{cert.issuer} · {cert.year}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ============================================
+     ABOUT
+  ============================================ */
+  .about-sec {
+    padding: 124px var(--edge);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 88px;
+    align-items: start;
+    background: var(--cream);
+  }
+  .about-copy {
+    font-size: 15.5px;
+    line-height: 1.9;
+    color: var(--fg2);
+    margin-top: 28px;
+    max-width: 470px;
+  }
+  .about-copy p + p { margin-top: 20px; }
+  .about-copy strong { color: var(--fg); font-weight: 600; }
+  .about-copy em { font-style: normal; color: var(--gold); font-weight: 600; }
+  .atags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 30px;
+  }
+  .atag {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--gold25);
+    padding: 6px 13px;
+    transition: background .2s, border-color .2s;
+    cursor: default;
+  }
+  .atag:hover { background: var(--gold08); border-color: var(--gold); }
+  .cred {
+    display: flex;
+    gap: 18px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .cred:first-child { border-top: 1px solid var(--line); }
+  .cred-n {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--gold);
+    padding-top: 2px;
+    min-width: 22px;
+    flex-shrink: 0;
+  }
+  .cred-t { font-size: 14px; font-weight: 600; color: var(--fg); margin-bottom: 3px; line-height: 1.3; }
+  .cred-s { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+
+  /* ============================================
+     EDUCATION
+  ============================================ */
+  .edu-sec {
+    padding: 0 var(--edge) 128px;
+    background: var(--cream);
+  }
+  .edu-top {
+    border-top: 1px solid var(--line);
+    padding-top: 68px;
+    margin-bottom: 52px;
+  }
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+  }
+  .edu-card {
+    background: var(--cream);
+    padding: 36px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: background .28s;
+  }
+  .edu-card:hover { background: var(--warm); }
+  .edu-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .42s ease;
+  }
+  .edu-card:hover::after { transform: scaleX(1); }
+  .edu-yr {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .15em;
+    color: var(--gold);
+    margin-bottom: 13px;
+  }
+  .edu-deg {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--fg);
+    line-height: 1.22;
+    margin-bottom: 5px;
+  }
+  .edu-sch {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .edu-desc { font-size: 13.5px; color: var(--fg2); line-height: 1.72; }
+  .edu-badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 8.5px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: var(--gold08);
+    padding: 4px 10px;
+    margin-top: 14px;
+    border: 1px solid var(--gold15);
+  }
+  .certs-block { margin-top: 56px; }
+  .certs-hd {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+  .certs-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+  .cert {
+    display: flex;
+    flex-direction: column;
+    background: var(--warm);
+    border: 1px solid var(--line);
+    padding: 11px 16px;
+    transition: background .2s, border-color .2s;
+    cursor: default;
+  }
+  .cert:hover { background: var(--gold08); border-color: var(--gold25); }
+  .cert-name { font-size: 12.5px; font-weight: 500; color: var(--fg2); line-height: 1.3; }
+  .cert-meta { font-family: var(--mono); font-size: 9.5px; color: var(--muted); margin-top: 3px; }
+
+  /* ============================================
+     RESPONSIVE
+  ============================================ */
+  @media (max-width: 1140px) {
+    .about-sec, .edu-sec { padding-left: 32px; padding-right: 32px; }
+  }
+  @media (max-width: 1024px) {
+    .about-sec { grid-template-columns: 1fr; gap: 52px; }
+    .edu-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .about-sec { padding: 80px 20px; }
+    .edu-sec { padding: 0 20px 80px; }
+  }
+</style>
