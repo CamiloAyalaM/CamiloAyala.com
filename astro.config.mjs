@@ -2,6 +2,9 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://camiloayala.com',
+  build: {
+    inlineStylesheets: 'always',
+  },
   vite: {
     ssr: {
       external: ['sharp']
