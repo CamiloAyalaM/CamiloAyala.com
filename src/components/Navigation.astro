@@ -3,12 +3,13 @@
 
 <nav id="nav">
   <a href="/" class="nav-logo">
-    <img src="/assets/img/camilo-ayala.webp" alt="Camilo Ayala" />
+    <img src="/assets/img/camilo-ayala.webp" alt="Camilo Ayala" width="600" height="160" />
   </a>
   <ul class="nav-links">
     <li><a href="#sobre">Sobre mí</a></li>
-    <li><a href="#portafolio">Portafolio</a></li>
     <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#portafolio">Portafolio</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
   <a href="#contacto" class="nav-cta">Hablemos</a>
@@ -120,23 +121,14 @@
 
 <script>
   const nav = document.getElementById('nav');
-  const navHeight = nav?.offsetHeight || 70;
-
-  let lastScrollY = 0;
+  const COMPACT_THRESHOLD = 140; // ~2x nav height, avoids forced reflow from offsetHeight
   let isCompact = false;
 
   document.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const shouldBeCompact = scrollY > navHeight * 2;
-
-    if (shouldBeCompact && !isCompact) {
-      nav?.classList.add('compact');
-      isCompact = true;
-    } else if (!shouldBeCompact && isCompact) {
-      nav?.classList.remove('compact');
-      isCompact = false;
+    const shouldBeCompact = window.scrollY > COMPACT_THRESHOLD;
+    if (shouldBeCompact !== isCompact) {
+      nav?.classList.toggle('compact', shouldBeCompact);
+      isCompact = shouldBeCompact;
     }
-
-    lastScrollY = scrollY;
-  });
+  }, { passive: true });
 </script>
