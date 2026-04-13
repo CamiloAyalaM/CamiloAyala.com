@@ -107,8 +107,17 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
     gap: 18px;
     padding: 22px 0;
     border-bottom: 1px solid var(--line);
+    opacity: 0;
+    transform: translateX(15px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
   }
   .cred:first-child { border-top: 1px solid var(--line); }
+  /* Staggered reveal when parent .about-r enters viewport */
+  .about-r.in .cred:nth-child(1) { opacity: 1; transform: none; transition-delay: 0s; }
+  .about-r.in .cred:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.1s; }
+  .about-r.in .cred:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.2s; }
+  .about-r.in .cred:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.3s; }
+  .about-r.in .cred:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.4s; }
   .cred-n {
     font-family: var(--mono);
     font-size: 10px;
@@ -158,7 +167,15 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
     transform-origin: left;
     transition: transform .42s ease;
   }
-  .edu-card:hover::after { transform: scaleX(1); }
+  /* On scroll-reveal: partial line at 30% — hover completes it */
+  .edu-card.in::after {
+    transform: scaleX(0.3);
+    transition: transform 0.8s cubic-bezier(.25,.46,.45,.94) 0.4s;
+  }
+  .edu-card:hover::after {
+    transform: scaleX(1);
+    transition: transform .42s ease 0s;
+  }
   .edu-yr {
     font-family: var(--mono);
     font-size: 10px;

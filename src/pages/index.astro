@@ -37,4 +37,90 @@ import ContactSection from '../components/sections/ContactSection.astro';
   }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
 
   document.querySelectorAll('.rv, .rv-l').forEach(el => revealObs.observe(el));
+
+  // ── All remaining animations respect prefers-reduced-motion ──────────────
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+
+    // 1. Hero photo parallax — photo drifts up at 30% of scroll speed
+    const heroPhoto = document.querySelector<HTMLElement>('.hero-photo');
+    if (heroPhoto) {
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const sy = window.scrollY;
+            if (sy < window.innerHeight * 1.5) {
+              heroPhoto.style.transform = `translateY(${sy * 0.3}px)`;
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+    }
+
+    // 2. Animated counters for Highlights strip
+    function animateCounter(el: HTMLElement, target: number, suffix: string) {
+      const duration = 1800;
+      const start = performance.now();
+      const isDecimal = String(target).includes('.');
+      function update(now: number) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+        const current = eased * target;
+        el.textContent = isDecimal
+          ? current.toFixed(1) + suffix
+          : Math.floor(current) + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    const highlightsEl = document.querySelector('.highlights');
+    if (highlightsEl) {
+      const hlObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.querySelectorAll<HTMLElement>('.hl-n').forEach(el => {
+              const text = el.textContent ?? '';
+              const numericValue = parseFloat(text);
+              const suffix = text.replace(/[\d.]/g, '');
+              animateCounter(el, numericValue, suffix);
+            });
+            hlObs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      hlObs.observe(highlightsEl);
+    }
+
+    // 6. Portfolio cards — mouse-driven image parallax
+    document.querySelectorAll<HTMLElement>('.pc').forEach(card => {
+      const img = card.querySelector<HTMLElement>('.pc-bg');
+      if (!img) return;
+      card.addEventListener('mousemove', (e: MouseEvent) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        img.style.transform = `scale(1.065) translate(${x * -12}px, ${y * -12}px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        img.style.transform = '';
+      });
+    });
+
+    // 9. Blog cards — subtle 3D tilt on hover
+    document.querySelectorAll<HTMLElement>('.li-card').forEach(card => {
+      card.addEventListener('mousemove', (e: MouseEvent) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        card.style.transform = `translateY(-4px) perspective(800px) rotateX(${y * -4}deg) rotateY(${x * 4}deg)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+
+  } // end prefers-reduced-motion check
 </script>
