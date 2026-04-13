@@ -101,6 +101,11 @@
     transition: color .22s, transform .28s;
   }
   .cta-link:hover .cta-arr { color: var(--gold); transform: translateX(5px); }
+  /* One-shot pulse on each arrow when the contact column enters viewport */
+  .cta-r.in .cta-link:nth-child(1) .cta-arr { animation: arr-pulse 1.2s ease 0.50s 1; }
+  .cta-r.in .cta-link:nth-child(2) .cta-arr { animation: arr-pulse 1.2s ease 0.65s 1; }
+  .cta-r.in .cta-link:nth-child(3) .cta-arr { animation: arr-pulse 1.2s ease 0.80s 1; }
+  .cta-r.in .cta-link:nth-child(4) .cta-arr { animation: arr-pulse 1.2s ease 0.95s 1; }
 
   /* ============================================
      FOOTER

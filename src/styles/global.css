@@ -208,7 +208,16 @@ nav.compact {
   gap: 11px;
   margin-bottom: 16px;
 }
-.s-line { width: 22px; height: 1px; background: var(--gold); }
+.s-line {
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.7s cubic-bezier(.25,.46,.45,.94);
+}
+.rv.in .s-line,
+.rv-l.in .s-line {
+  width: 22px;
+}
 .s-txt {
   font-family: var(--mono);
   font-size: 9px;
@@ -530,6 +539,20 @@ nav.compact {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+}
+
+/* CLIENT LOGOS — enhanced reveal with scale */
+.cl-item.rv {
+  transform: translateY(10px) scale(0.96);
+}
+.cl-item.rv.in {
+  transform: none;
+}
+
+/* CTA ARROW — pulse keyframe (used in ContactSection) */
+@keyframes arr-pulse {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(6px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
