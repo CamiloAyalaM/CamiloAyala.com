@@ -6,7 +6,7 @@ import { services } from '../../data/portfolio';
   <div class="srv-head">
     <div class="rv-l">
       <div class="s-tag"><div class="s-line"></div><span class="s-txt">Servicios</span></div>
-      <h2 class="sec dk">Lo que puedo<br>hacer por <em>ti.</em></h2>
+      <h2 class="sec dk">Dónde genero<br><em>valor.</em></h2>
     </div>
     <p class="srv-intro rv">Asesoría de nivel directivo: combino visión estratégica, diseño y herramientas de IA para que organizaciones, instituciones y marcas crezcan con intención — con resultados medibles sobre la mesa.</p>
   </div>
@@ -73,19 +73,14 @@ import { services } from '../../data/portfolio';
     height: 100%;
     transition: height .42s ease 0s;
   }
-  /* Numeral monumental perfilado en dorado */
+  /* Numeral monumental en relleno dorado sutil */
   .srv-n {
     font-family: var(--serif);
-    font-style: italic;
-    font-size: 58px;
+    font-size: 60px;
     font-weight: 600;
     line-height: 1;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--gold25);
+    color: rgba(182, 144, 58, 0.28);
     margin-bottom: 20px;
-  }
-  @supports not (-webkit-text-stroke: 1px #000) {
-    .srv-n { color: var(--gold15); }
   }
   .srv-title { font-family: var(--serif); font-size: 26px; font-weight: 600; color: rgba(244,240,232,.97); margin-bottom: 11px; }
   .srv-desc {

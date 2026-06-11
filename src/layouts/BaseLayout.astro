@@ -9,8 +9,8 @@ interface Props {
 }
 
 const {
-  title = 'Camilo Ayala Monje — Estratega en Diseño, Marketing y Comunicación',
-  description = 'Estratega y líder en marketing, comunicación y diseño. 12+ años dirigiendo posicionamiento, crecimiento y transformación digital para Universidad de los Andes, Banco de la República, Universidad El Bosque y marcas globales como Marriott y Nokia. Magíster en Diseño, ponente internacional. Bogotá, Colombia.',
+  title = 'Camilo Ayala Monje — Ejecutivo Senior en Estrategia, Mercadeo y Transformación Digital',
+  description = 'Ejecutivo senior en estrategia de marca, mercadeo y comunicación digital. Más de 12 años liderando posicionamiento institucional, crecimiento de matrícula y transformación digital en educación superior, banca central y consultoría internacional. Bogotá, Colombia.',
   image = '/assets/img/camilo-photo.jpg',
   url = 'https://camiloayala.com'
 } = Astro.props;
@@ -71,7 +71,7 @@ const canonicalURL = new URL(Astro.url.pathname, url);
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Camilo Ayala Monje",
-      "jobTitle": "Estratega en Diseño, Marketing y Comunicación · Coordinador de Admisiones y Profesor",
+      "jobTitle": "Ejecutivo Senior en Estrategia de Marca, Mercadeo y Comunicación Digital",
       "award": "Ganador del concurso nacional de diseño de la moneda conmemorativa 90 años, Banco de la República (2015)",
       "url": "https://camiloayala.com",
       "image": "https://camiloayala.com/assets/img/camilo-photo.jpg",
@@ -146,6 +146,7 @@ const canonicalURL = new URL(Astro.url.pathname, url);
 
 <body>
   <div id="cur"></div><div id="curl"></div>
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
   <slot />
   
   <script defer>
