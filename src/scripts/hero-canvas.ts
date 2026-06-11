@@ -115,7 +115,7 @@ export function initHeroCanvas(): void {
 
   function fade(): void {
     ctx!.globalCompositeOperation = 'destination-out';
-    ctx!.fillStyle = 'rgba(0,0,0,0.018)';
+    ctx!.fillStyle = 'rgba(0,0,0,0.032)';
     ctx!.fillRect(0, 0, w, h);
     ctx!.globalCompositeOperation = 'source-over';
   }
