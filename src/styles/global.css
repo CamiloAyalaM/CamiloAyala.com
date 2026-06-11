@@ -164,7 +164,7 @@ nav.compact {
 
 .nav-cta {
   font-family: var(--mono);
-  font-size: 10.5px;
+  font-size: 11px;
   letter-spacing: 0.11em;
   color: var(--ink);
   background: var(--gold);
@@ -247,7 +247,7 @@ nav.compact {
 }
 .s-txt {
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: .24em;
   text-transform: uppercase;
   color: var(--gold);
@@ -458,43 +458,6 @@ body.hide-cursor #curl {
     linear-gradient(to top, #0d0b09 0%, transparent 30%);
 }
 
-.hero-badge {
-  position: absolute;
-  bottom: 72px;
-  right: 40px;
-  background: rgba(13,11,9,.84);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(182,144,58,.2);
-  padding: 20px 24px;
-  z-index: 4;
-  max-width: 224px;
-  opacity: 0;
-  animation: f-up .85s ease 1.25s forwards;
-}
-
-.b-label {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: .19em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.b-val {
-  font-family: var(--serif);
-  font-size: 17px;
-  font-weight: 600;
-  color: rgba(244,240,232,.97);
-  line-height: 1.25;
-}
-
-.b-sub {
-  font-size: 11px;
-  color: rgba(140,130,118,.68);
-  margin-top: 6px;
-}
-
 /* EYEBROW */
 .eyebrow {
   display: flex;
@@ -540,7 +503,7 @@ body.hide-cursor #curl {
 
 /* HERO DESC */
 .hero-desc {
-  font-size: 16.5px;
+  font-size: 17px;
   line-height: 1.85;
   color: rgba(218,208,192,.78);
   max-width: 480px;
@@ -662,7 +625,6 @@ body.hide-cursor #curl {
 @media (max-width: 1140px) {
   nav, nav.compact { padding-left: 32px; padding-right: 32px; }
   .hero { grid-template-columns: 58% 42%; }
-  .hero-badge { display: none; }
 }
 
 @media (max-width: 768px) {
