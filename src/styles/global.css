@@ -350,26 +350,41 @@ body.hide-cursor #curl {
   transform: scaleX(1);
 }
 
-/* PALABRA FANTASMA — tipografía gigante perfilada detrás de secciones */
+/* PALABRA FANTASMA — tipografía gigante de fondo, relleno sólido sutil */
 .ghost {
   position: absolute;
   z-index: -1;
   top: 2%;
   right: -2vw;
   font-family: var(--serif);
-  font-style: italic;
   font-weight: 600;
   font-size: clamp(130px, 19vw, 310px);
   line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--gold15);
+  color: rgba(182, 144, 58, 0.07);
   pointer-events: none;
   user-select: none;
   white-space: nowrap;
 }
-@supports not (-webkit-text-stroke: 1px #000) {
-  .ghost {
-    color: var(--gold08);
+
+/* RETÍCULA — hairlines verticales que dan arquitectura a la página */
+.grid-lines {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: var(--edge);
+  right: var(--edge);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 250;
+}
+.grid-lines span {
+  width: 1px;
+  background: rgba(127, 118, 105, 0.09);
+}
+@media (max-width: 768px) {
+  .grid-lines {
+    display: none;
   }
 }
 
@@ -575,6 +590,36 @@ body.hide-cursor #curl {
   width: 13px;
   height: 13px;
   fill: var(--gold);
+}
+
+/* HERO SCOPE — áreas de liderazgo bajo los CTAs */
+.hero-scope {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 0;
+  margin-top: 52px;
+  padding-top: 26px;
+  border-top: 1px solid var(--dline);
+  opacity: 0;
+  animation: f-up .85s ease 1.15s forwards;
+}
+
+.hero-scope span {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(208, 168, 80, .75);
+  padding-right: 22px;
+  margin-right: 22px;
+  border-right: 1px solid var(--dline);
+  line-height: 1.6;
+}
+
+.hero-scope span:last-child {
+  border-right: none;
+  padding-right: 0;
+  margin-right: 0;
 }
 
 /* HERO STATS */

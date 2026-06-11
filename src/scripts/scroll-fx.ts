@@ -109,7 +109,7 @@ function initMarquee(): void {
 
   let x = 0;
   let vel = 0;
-  const BASE_SPEED = 80; // px/s — proporcional al nuevo cuerpo display del marquee
+  const BASE_SPEED = 55; // px/s — cinta institucional en mono compacto
 
   gsap.ticker.add((_time, deltaTime) => {
     const dt = deltaTime / 1000;
