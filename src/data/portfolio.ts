@@ -96,14 +96,14 @@ export const services = [
   {
     number: '02',
     title: 'Growth & Marketing Educativo',
-    description: 'Captación y admisiones para instituciones educativas: embudos, experiencia del candidato y analítica. +20% en inscripciones en Uniandes.',
+    description: 'Captación y admisiones para instituciones educativas: embudos, experiencia del candidato y analítica para decisiones de dirección.',
     tags: ['Admisiones', 'Embudos', 'Experiencia del Candidato'],
     fullDescription: 'Estrategias de captación y posicionamiento institucional probadas en Universidad de los Andes, Universidad El Bosque y Colegio Marymount: experiencia del candidato, embudos digitales e indicadores para la toma de decisiones.'
   },
   {
     number: '03',
     title: 'Transformación Digital & CRM',
-    description: 'SEO, SEM, Salesforce y analítica de datos al servicio de KPIs de negocio. +40% en tráfico y +75% en engagement.',
+    description: 'SEO, SEM, Salesforce y analítica de datos al servicio de los KPIs del negocio, de la auditoría a la operación.',
     tags: ['SEO · SEM', 'Salesforce', 'Analítica'],
     fullDescription: 'De la auditoría técnica a la operación: Google Analytics, Salesforce, automatización y campañas con ROI demostrable, integradas a la estrategia de crecimiento de la organización.'
   },
@@ -139,34 +139,40 @@ export const credentials = [
   },
   {
     number: '02',
-    title: 'Líder de Mercadeo y Experiencia — Uniandes',
-    subtitle: '7 años · Escuela de Gobierno e Ing. Mecánica · +20% inscripciones · +75% engagement',
-    description: 'Dirección estratégica de mercadeo y comunicaciones con equipos multidisciplinarios. Creación del Laboratorio CREA (STEAM+) con patrocinio privado y alcance nacional.'
+    title: 'Profesor de posgrado — ESEIT',
+    subtitle: 'Especialización en Gerencia Comercial · Especialización en Marketing e Inteligencia Artificial',
+    description: 'Formo a directivos y profesionales en ejercicio integrando estrategia comercial, comportamiento de mercado e impacto real de la IA en las decisiones de negocio.'
   },
   {
     number: '03',
+    title: 'Líder de Mercadeo y Experiencia — Uniandes',
+    subtitle: '7 años · Escuela de Gobierno Alberto Lleras Camargo · Ingeniería Mecánica',
+    description: 'Dirección estratégica de mercadeo y comunicaciones, liderando equipos multidisciplinarios y el plan integral de posicionamiento, captación y reputación institucional.'
+  },
+  {
+    number: '04',
+    title: 'Laboratorio CREA — creación y liderazgo',
+    subtitle: 'Iniciativa estratégica STEAM+ · patrocinio privado · alcance local, regional y nacional',
+    description: 'Lideré la creación e implementación de un laboratorio de formación STEAM+ con financiación privada, desde el diseño de la iniciativa hasta su operación con impacto nacional.'
+  },
+  {
+    number: '05',
     title: 'Banco de la República — Subgerencia Cultural',
     subtitle: 'Proyectos estratégicos de divulgación · Diseñador de la moneda conmemorativa 90 Años',
     description: 'Liderazgo de proyectos museográficos y de acceso público. Ganador del concurso nacional de diseño de la moneda conmemorativa de los 90 años del Banco.'
   },
   {
-    number: '04',
+    number: '06',
     title: 'Consultor internacional',
     subtitle: 'Marriott Rewards · Nokia USA · NOBOX · MUZO Emerald — USA y Caribe',
-    description: 'Diseño experiencial, audiovisual y de marca para cuentas globales, desde campañas con millones de impresiones hasta fotografía especializada de alta joyería.'
-  },
-  {
-    number: '05',
-    title: 'Profesor de posgrado en Marketing e IA — ESEIT',
-    subtitle: 'Gerencia Comercial · Marketing e Inteligencia Artificial · Investigador publicado (DOI)',
-    description: 'Formo a directivos en estrategia comercial e impacto real de la IA en las decisiones de negocio. Ponente internacional (ECADE 2022, Oporto) y Magíster en Diseño, Uniandes.'
+    description: 'Diseño experiencial, audiovisual y de marca para cuentas globales, desde campañas internacionales hasta fotografía especializada de alta joyería.'
   }
 ];
 
 export const highlights = [
   { number: '12+', label: 'Años dirigiendo\nestrategia y equipos' },
-  { number: '20%', label: 'Más inscripciones\nU. de los Andes' },
-  { number: '75%', label: 'Más engagement\ntransformación digital' },
+  { number: '3', label: 'Sectores: educación,\nbanca central y consultoría' },
+  { number: '10+', label: 'Instituciones\ny marcas lideradas' },
   { number: '4.1M', label: 'Impresiones\ncampañas USA' }
 ];
 

@@ -407,12 +407,12 @@ body.hide-cursor #curl {
   z-index: 3;
 }
 
-/* FOTO DEL HERO — a sangre completa, fundida por construcción:
-   el degradado ancho hacia la izquierda elimina cualquier costura. */
+/* FOTO DEL HERO — alineada a la derecha; la barra de ink del lado del
+   texto se funde con la imagen en una zona ancha de transición. */
 .hero-photo {
   position: absolute;
   inset: -8% 0;
-  background: url('/assets/img/camilo-photo.webp') 78% 12% / cover no-repeat;
+  background: url('/assets/img/camilo-photo.webp') right 12% / cover no-repeat;
   z-index: 0;
 }
 
@@ -422,14 +422,14 @@ body.hide-cursor #curl {
   inset: 0;
   background:
     linear-gradient(to right,
-      #0d0b09 0%, #0d0b09 36%,
-      rgba(13,11,9,.92) 46%,
-      rgba(13,11,9,.55) 58%,
-      rgba(13,11,9,.15) 74%,
-      rgba(13,11,9,.02) 88%, transparent 100%),
-    linear-gradient(to top, rgba(13,11,9,.75) 0%, transparent 32%),
-    linear-gradient(to bottom, rgba(13,11,9,.55) 0%, transparent 18%),
-    radial-gradient(ellipse 60% 70% at 78% 40%, rgba(182,144,58,.07) 0%, transparent 70%);
+      #0d0b09 0%, #0d0b09 44%,
+      rgba(13,11,9,.86) 52%,
+      rgba(13,11,9,.4) 62%,
+      rgba(13,11,9,.08) 72%,
+      transparent 82%),
+    linear-gradient(to top, rgba(13,11,9,.7) 0%, transparent 28%),
+    linear-gradient(to bottom, rgba(13,11,9,.5) 0%, transparent 16%),
+    radial-gradient(ellipse 55% 70% at 82% 40%, rgba(182,144,58,.06) 0%, transparent 70%);
 }
 
 /* ÓRBITAS — sistema de anillos dorados en rotación lenta tras el texto */
