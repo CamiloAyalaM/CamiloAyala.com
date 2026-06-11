@@ -23,6 +23,7 @@ const canonicalURL = new URL(Astro.url.pathname, url);
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <script is:inline>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion');</script>
   <meta name="description" content={description} />
   <meta name="keywords" content="diseño estratégico, marketing digital, comunicación, IA, diseño generativo, UX/UI, profesor, bogotá" />
   <meta name="author" content="Camilo Ayala Monje" />
@@ -144,7 +145,8 @@ const canonicalURL = new URL(Astro.url.pathname, url);
   <slot />
   
   <script defer>
-    // Custom cursor
+    // Custom cursor — solo en dispositivos con puntero fino
+    if (window.matchMedia('(pointer: fine)').matches) {
     const cur = document.getElementById('cur');
     const curl = document.getElementById('curl');
     let rx = 0, ry = 0;
@@ -178,6 +180,7 @@ const canonicalURL = new URL(Astro.url.pathname, url);
         curl.style.height = '30px';
       });
     });
+    }
   </script>
 </body>
 </html>

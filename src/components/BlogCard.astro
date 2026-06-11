@@ -56,7 +56,6 @@ if (daysAgo < 7) {
     padding: 2rem;
     border: 1px solid rgba(13, 11, 9, 0.08);
     border-radius: 0;
-    animation: fadeInUp 0.8s ease-out;
     transition: all 0.3s ease;
     text-decoration: none;
     color: inherit;
@@ -66,7 +65,8 @@ if (daysAgo < 7) {
   }
 
   .li-card:hover {
-    box-shadow: 0 10px 30px rgba(26, 26, 26, 0.08);
+    /* micro-lift con sombra cálida sutil */
+    box-shadow: 0 12px 30px rgba(120, 96, 50, 0.13);
     transform: translateY(-4px);
   }
 
@@ -166,14 +166,4 @@ if (daysAgo < 7) {
     margin-left: auto;
   }
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(32px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 </style>

@@ -29,6 +29,21 @@ html {
   scroll-behavior: smooth;
 }
 
+/* LENIS — smooth scroll (estilos recomendados) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
 body {
   background: var(--cream);
   color: var(--fg);
@@ -48,7 +63,7 @@ body {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: width 0.18s, height 0.18s;
+  transition: width 0.18s, height 0.18s, opacity 0.15s;
   will-change: transform, width, height;
 }
 
@@ -62,8 +77,20 @@ body {
   z-index: 9998;
   transform: translate(-50%, -50%);
   transition: width 0.26s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    height 0.26s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height 0.26s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.15s;
   will-change: transform, width, height;
+}
+
+/* En touch no hay cursor custom */
+@media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+  #cur,
+  #curl {
+    display: none;
+  }
 }
 
 /* NAV */
@@ -237,6 +264,92 @@ nav.compact {
 .sec.dk { color: rgba(244,240,232,.97); }
 .sec.dk em { color: var(--gold); }
 
+/* ETIQUETA FLOTANTE "Ver →" del portafolio (creada por JS) */
+.pc-label {
+  position: fixed;
+  top: -14px;
+  left: 14px;
+  z-index: 9999;
+  pointer-events: none;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--gold);
+  padding: 8px 14px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  will-change: transform;
+}
+.pc-label.on {
+  opacity: 1;
+}
+/* El cursor custom cede el lugar a la etiqueta mientras está activa */
+body.hide-cursor #cur,
+body.hide-cursor #curl {
+  opacity: 0;
+}
+
+/* BARRA DE PROGRESO DE LECTURA (creada por JS) */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 400;
+  pointer-events: none;
+}
+
+/* SCROLL-SPY — enlace activo del nav */
+.nav-links a.active {
+  color: rgba(244, 240, 232, 0.85);
+}
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* TIPOGRAFÍA EN MOVIMIENTO — split por palabras (.w máscara / .wi palabra) */
+.motion .h1,
+.motion .sec {
+  visibility: hidden; /* GSAP la restaura tras el split (anti-FOUC) */
+}
+.w {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+.wi {
+  display: inline-block;
+  will-change: transform;
+}
+/* Subrayado dorado que se "dibuja" en los <em> de acento */
+.motion .h1 em,
+.motion .sec em {
+  position: relative;
+}
+.motion .h1 em::after,
+.motion .sec em::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.04em;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+}
+.motion .h1 em.drawn::after,
+.motion .sec em.drawn::after {
+  transform: scaleX(1);
+}
+
 /* NOISE OVERLAY */
 .noise {
   position: absolute;
@@ -278,10 +391,21 @@ nav.compact {
   z-index: 3;
 }
 
+/* Canvas generativo del hero — detrás del contenido, sin interacción */
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .hero-right {
   position: relative;
   overflow: hidden;
   min-height: 100%;
+  z-index: 2; /* la foto queda por encima del canvas generativo */
 }
 
 .hero-photo {
