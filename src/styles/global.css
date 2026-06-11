@@ -252,6 +252,43 @@ nav.compact {
 .sec.dk { color: rgba(244,240,232,.97); }
 .sec.dk em { color: var(--gold); }
 
+/* TIPOGRAFÍA EN MOVIMIENTO — split por palabras (.w máscara / .wi palabra) */
+.motion .h1,
+.motion .sec {
+  visibility: hidden; /* GSAP la restaura tras el split (anti-FOUC) */
+}
+.w {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+.wi {
+  display: inline-block;
+  will-change: transform;
+}
+/* Subrayado dorado que se "dibuja" en los <em> de acento */
+.motion .h1 em,
+.motion .sec em {
+  position: relative;
+}
+.motion .h1 em::after,
+.motion .sec em::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.04em;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+}
+.motion .h1 em.drawn::after,
+.motion .sec em.drawn::after {
+  transform: scaleX(1);
+}
+
 /* NOISE OVERLAY */
 .noise {
   position: absolute;
