@@ -391,7 +391,9 @@ body.hide-cursor #curl {
   z-index: 3;
 }
 
-/* Canvas generativo del hero — detrás del contenido, sin interacción */
+/* Canvas generativo del hero — detrás del contenido, sin interacción.
+   La máscara desvanece los trazos hacia la foto y los bordes para que
+   el fundido foto→fondo siga leyéndose como una sola pieza. */
 .hero-canvas {
   position: absolute;
   inset: 0;
@@ -399,6 +401,15 @@ body.hide-cursor #curl {
   height: 100%;
   z-index: 1;
   pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 75% 110% at 28% 50%, #000 35%, transparent 75%);
+  mask-image: radial-gradient(ellipse 75% 110% at 28% 50%, #000 35%, transparent 75%);
+}
+
+@media (max-width: 768px) {
+  .hero-canvas {
+    -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 60%, #000 35%, transparent 80%);
+    mask-image: radial-gradient(ellipse 90% 80% at 50% 60%, #000 35%, transparent 80%);
+  }
 }
 
 .hero-right {
