@@ -366,28 +366,6 @@ body.hide-cursor #curl {
   white-space: nowrap;
 }
 
-/* RETÍCULA — hairlines verticales que dan arquitectura a la página */
-.grid-lines {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: var(--edge);
-  right: var(--edge);
-  display: flex;
-  justify-content: space-between;
-  pointer-events: none;
-  z-index: 250;
-}
-.grid-lines span {
-  width: 1px;
-  background: rgba(127, 118, 105, 0.09);
-}
-@media (max-width: 768px) {
-  .grid-lines {
-    display: none;
-  }
-}
-
 /* NOISE OVERLAY */
 .noise {
   position: absolute;
@@ -429,39 +407,13 @@ body.hide-cursor #curl {
   z-index: 3;
 }
 
-/* Canvas generativo del hero — detrás del contenido, sin interacción.
-   La máscara desvanece los trazos hacia la foto y los bordes para que
-   el fundido foto→fondo siga leyéndose como una sola pieza. */
-.hero-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 34%, transparent 52%);
-  mask-image: linear-gradient(to right, #000 0%, #000 34%, transparent 52%);
-}
-
-@media (max-width: 768px) {
-  .hero-canvas {
-    -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 60%, #000 35%, transparent 80%);
-    mask-image: radial-gradient(ellipse 90% 80% at 50% 60%, #000 35%, transparent 80%);
-  }
-}
-
-.hero-right {
-  position: relative;
-  overflow: hidden;
-  min-height: 100%;
-  z-index: 2; /* la foto queda por encima del canvas generativo */
-}
-
+/* FOTO DEL HERO — a sangre completa, fundida por construcción:
+   el degradado ancho hacia la izquierda elimina cualquier costura. */
 .hero-photo {
   position: absolute;
-  inset: 0;
-  background: url('/assets/img/camilo-photo.webp') center 15% / cover no-repeat;
-  z-index: 1;
+  inset: -8% 0;
+  background: url('/assets/img/camilo-photo.webp') 78% 12% / cover no-repeat;
+  z-index: 0;
 }
 
 .hero-photo::after {
@@ -469,8 +421,52 @@ body.hide-cursor #curl {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right, #0d0b09 0%, rgba(13,11,9,.08) 52%, transparent 100%),
-    linear-gradient(to top, #0d0b09 0%, transparent 30%);
+    linear-gradient(to right,
+      #0d0b09 0%, #0d0b09 36%,
+      rgba(13,11,9,.92) 46%,
+      rgba(13,11,9,.55) 58%,
+      rgba(13,11,9,.15) 74%,
+      rgba(13,11,9,.02) 88%, transparent 100%),
+    linear-gradient(to top, rgba(13,11,9,.75) 0%, transparent 32%),
+    linear-gradient(to bottom, rgba(13,11,9,.55) 0%, transparent 18%),
+    radial-gradient(ellipse 60% 70% at 78% 40%, rgba(182,144,58,.07) 0%, transparent 70%);
+}
+
+/* ÓRBITAS — sistema de anillos dorados en rotación lenta tras el texto */
+.hero-orbits {
+  position: absolute;
+  left: max(-180px, calc(var(--edge) - 380px));
+  top: 50%;
+  width: min(56vw, 860px);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-orbits svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.orb {
+  transform-origin: 400px 400px;
+  transform-box: view-box;
+  animation: orbit 90s linear infinite;
+}
+
+.orb-2 {
+  animation-duration: 150s;
+  animation-direction: reverse;
+}
+
+.orb-3 {
+  animation-duration: 220s;
+}
+
+@keyframes orbit {
+  to { transform: rotate(360deg); }
 }
 
 /* EYEBROW */
@@ -680,18 +676,24 @@ body.hide-cursor #curl {
 
   .hero {
     grid-template-columns: 1fr;
-    min-height: auto;
+    min-height: 94svh;
   }
   .hero-left {
-    padding: 36px 20px 56px;
-    order: 2;
-    justify-content: flex-start;
+    padding: 130px 20px 56px;
+    justify-content: flex-end;
   }
-  .hero-right {
-    height: 72vw;
-    min-height: auto;
-    order: 1;
+  .hero-photo {
+    background-position: 68% 0%;
   }
+  .hero-photo::after {
+    background:
+      linear-gradient(to top,
+        #0d0b09 6%,
+        rgba(13,11,9,.82) 42%,
+        rgba(13,11,9,.45) 70%,
+        rgba(13,11,9,.2) 100%);
+  }
+  .hero-orbits { display: none; }
   .h1 { font-size: clamp(46px, 13.5vw, 72px); }
   .hero-stats {
     flex-wrap: wrap;

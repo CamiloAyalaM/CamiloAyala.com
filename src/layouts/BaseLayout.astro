@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title = 'Camilo Ayala Monje — Ejecutivo Senior en Estrategia, Mercadeo y Transformación Digital',
-  description = 'Ejecutivo senior en estrategia de marca, mercadeo y comunicación digital. Más de 12 años liderando posicionamiento institucional, crecimiento de matrícula y transformación digital en educación superior, banca central y consultoría internacional. Bogotá, Colombia.',
+  description = 'Ejecutivo senior en estrategia de marca, mercadeo y comunicación digital. Más de 12 años liderando posicionamiento institucional y transformación digital en educación superior, banca central y consultoría internacional. Profesor de posgrado en marketing e IA. Bogotá, Colombia.',
   image = '/assets/img/camilo-photo.jpg',
   url = 'https://camiloayala.com'
 } = Astro.props;
@@ -146,7 +146,6 @@ const canonicalURL = new URL(Astro.url.pathname, url);
 
 <body>
   <div id="cur"></div><div id="curl"></div>
-  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
   <slot />
   
   <script defer>
