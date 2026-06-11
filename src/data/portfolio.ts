@@ -88,86 +88,86 @@ export const portfolioProjects = [
 export const services = [
   {
     number: '01',
-    title: 'Estrategia de Marca',
-    description: 'Posicionamiento, identidad y comunicación coherente para marcas que quieren diferenciarse con autoridad.',
-    tags: ['Branding', 'Posicionamiento', 'Identidad'],
-    fullDescription: 'Desarrollamos estrategias de marca que van más allá de lo visual. Definimos propuesta de valor, arquitectura de marca, línea editorial y comunicación integrada. Ideal para organizaciones que quieren construir presencia a largo plazo.'
+    title: 'Dirección Estratégica de Marca',
+    description: 'Posicionamiento institucional y arquitectura de marca para organizaciones que compiten por autoridad. Del diagnóstico al gobierno de marca.',
+    tags: ['Posicionamiento', 'Arquitectura de Marca', 'Reputación'],
+    fullDescription: 'Dirección estratégica de marca de nivel directivo: propuesta de valor, arquitectura, línea editorial y comunicación integrada, con seguimiento sobre indicadores de reputación y posicionamiento.'
   },
   {
     number: '02',
-    title: 'Marketing Digital',
-    description: 'SEO, SEM, CRM y analítica. Estrategias medibles con enfoque en conversión y crecimiento sostenido.',
-    tags: ['SEO', 'SEM', 'CRM', 'Analytics'],
-    fullDescription: 'Desde auditoría técnica hasta estrategia de contenido y gestión de campañas. Trabajamos con herramientas reales: Google Analytics, Salesforce, HubSpot. Enfoque en ROI demostrables.'
+    title: 'Growth & Marketing Educativo',
+    description: 'Captación y admisiones para instituciones educativas: embudos, experiencia del candidato y analítica. +20% en inscripciones en Uniandes.',
+    tags: ['Admisiones', 'Embudos', 'Experiencia del Candidato'],
+    fullDescription: 'Estrategias de captación y posicionamiento institucional probadas en Universidad de los Andes, Universidad El Bosque y Colegio Marymount: experiencia del candidato, embudos digitales e indicadores para la toma de decisiones.'
   },
   {
     number: '03',
-    title: 'UX / UI Consulting',
-    description: 'Experiencias digitales centradas en el usuario. Auditorías, rediseños y design systems de alto impacto.',
-    tags: ['UX Research', 'Prototipado', 'Design Systems'],
-    fullDescription: 'Desde investigación de usuarios hasta prototipado y validación. Creamos interfaces que funcionan y se ven bien. Especialista en design systems escalables.'
+    title: 'Transformación Digital & CRM',
+    description: 'SEO, SEM, Salesforce y analítica de datos al servicio de KPIs de negocio. +40% en tráfico y +75% en engagement.',
+    tags: ['SEO · SEM', 'Salesforce', 'Analítica'],
+    fullDescription: 'De la auditoría técnica a la operación: Google Analytics, Salesforce, automatización y campañas con ROI demostrable, integradas a la estrategia de crecimiento de la organización.'
   },
   {
     number: '04',
-    title: 'Personal Branding',
-    description: 'Para académicos y profesionales que quieren construir presencia digital con autoridad en Latinoamérica.',
-    tags: ['LinkedIn', 'Contenido', 'Posicionamiento'],
-    fullDescription: 'Posicionamiento estratégico en redes sociales, especialmente LinkedIn. Desarrollo de voz personal, curación de contenido y estrategia de crecimiento. Ideal para consultores, docentes y líderes de opinión.'
+    title: 'UX & Experiencia de Cliente',
+    description: 'Auditorías, rediseños y design systems que alinean la experiencia digital con los objetivos del negocio.',
+    tags: ['UX Research', 'CX', 'Design Systems'],
+    fullDescription: 'Consultoría UX/UI con mirada de negocio: investigación de usuarios, prototipado, validación y design systems escalables. Product Designer en comités de gobernanza web de Uniandes.'
   },
   {
     number: '05',
-    title: 'Contenido & Curación',
-    description: 'Estrategia editorial orientada a SEO. Redacción y distribución para audiencias en diseño, educación y tecnología.',
-    tags: ['Editorial', 'SEO Content', 'Distribución'],
-    fullDescription: 'Creamos contenido que posiciona. Desde artículos largos hasta threads en LinkedIn. Enfoque en SEO, storytelling y distribución estratégica. Para marcas, instituciones y profesionales individuales.'
+    title: 'IA & Diseño Generativo',
+    description: 'Adopción de IA en procesos creativos y de negocio, con respaldo académico: tesis de maestría y paper internacional peer-reviewed.',
+    tags: ['IA Aplicada', 'Co-creación', 'Investigación'],
+    fullDescription: 'Asesoría en integración de IA y diseño generativo en flujos creativos y organizacionales, fundamentada en investigación publicada (DOI) y presentada en la European Conference on Arts, Design & Education (Oporto, 2022).'
   },
   {
     number: '06',
-    title: 'Talleres & Formación',
-    description: 'Workshops de Design Thinking, branding e IA aplicada para equipos creativos, instituciones y empresas.',
-    tags: ['Design Thinking', 'IA', 'Workshops'],
-    fullDescription: 'Diseño de talleres que generan transformación. Design Thinking aplicado, introducción a IA en diseño, branding estratégico. Adaptable a nivel introductorio, intermedio o avanzado.'
+    title: 'Conferencias & Formación Ejecutiva',
+    description: 'Keynotes y workshops para comités directivos y equipos: estrategia, Design Thinking e IA aplicada. Ponente internacional.',
+    tags: ['Keynotes', 'Design Thinking', 'IA'],
+    fullDescription: 'Conferencias y programas de formación para directivos y equipos creativos, con experiencia como ponente internacional (ECADE 2022, Oporto) y profesor universitario en tres universidades colombianas.'
   }
 ];
 
 export const credentials = [
   {
     number: '01',
-    title: 'Magíster en Diseño — U. de los Andes',
-    subtitle: 'Enfoque en mercadeo · Humanidades Digitales · Diseño generativo e IA',
-    description: 'Investigación sobre diseño generativo, IA y co-creación. Intersección entre tecnología, humanidades digitales y diseño. Archivos digitales y colecciones.'
+    title: 'Coordinador de Admisiones — U. El Bosque',
+    subtitle: 'Dirección del sistema de admisiones · Facultad de Creación y Comunicación · 2025–presente',
+    description: 'Integración de captación, evaluación y acompañamiento de aspirantes; estrategia articulada con áreas académicas y de mercadeo, con indicadores clave para la toma de decisiones.'
   },
   {
     number: '02',
-    title: 'Ponente internacional · ECADE2022, Oporto',
-    subtitle: 'Diseño generativo y co-creación con IA · IAFOR',
-    description: 'Presentación sobre "Diseño Generativo como herramienta de co-creación en contextos de economía informal". Publicación peer-reviewed.'
+    title: 'Líder de Mercadeo y Experiencia — Uniandes',
+    subtitle: '7 años · Escuela de Gobierno e Ing. Mecánica · +20% inscripciones · +75% engagement',
+    description: 'Dirección estratégica de mercadeo y comunicaciones con equipos multidisciplinarios. Creación del Laboratorio CREA (STEAM+) con patrocinio privado y alcance nacional.'
   },
   {
     number: '03',
-    title: 'Profesor universitario · 5+ años',
-    subtitle: 'U. El Bosque · Uniandes · U. Sergio Arboleda',
-    description: 'Docencia en diseño estratégico, comunicación digital, marketing y humanidades digitales. Investigación aplicada y mentoría.'
+    title: 'Banco de la República — Subgerencia Cultural',
+    subtitle: 'Proyectos estratégicos de divulgación · Diseñador de la moneda conmemorativa 90 Años',
+    description: 'Liderazgo de proyectos museográficos y de acceso público. Ganador del concurso nacional de diseño de la moneda conmemorativa de los 90 años del Banco.'
   },
   {
     number: '04',
     title: 'Consultor internacional',
-    subtitle: 'Nokia USA · Marriott Caribbean · NOBOX · MUZO Emerald',
-    description: 'Estrategia de marca, comunicación digital y transformación organizacional. Proyectos en USA, Latinoamérica y Europa.'
+    subtitle: 'Marriott Rewards · Nokia USA · NOBOX · MUZO Emerald — USA y Caribe',
+    description: 'Diseño experiencial, audiovisual y de marca para cuentas globales, desde campañas con millones de impresiones hasta fotografía especializada de alta joyería.'
   },
   {
     number: '05',
-    title: 'Estrategia · Sector público y educativo',
-    subtitle: 'Banco de la República · Escuela de Gobierno Uniandes · IPES',
-    description: 'Transformación digital, marketing educativo y comunicación estratégica en instituciones de impacto social.'
+    title: 'Investigador publicado y ponente internacional',
+    subtitle: 'Paper peer-reviewed (DOI) · ECADE 2022, Oporto · Magíster en Diseño, Uniandes',
+    description: 'Tesis y publicación internacional sobre diseño generativo y co-creación con pensamiento computacional. Profesor universitario en tres universidades colombianas.'
   }
 ];
 
 export const highlights = [
-  { number: '12+', label: 'Años de\nexperiencia' },
-  { number: '10+', label: "Clientes int'l\nconsultoría" },
-  { number: '4.1M', label: 'Impresiones\ncampañas USA' },
-  { number: '5K', label: 'Seguidores\nen LinkedIn' }
+  { number: '12+', label: 'Años dirigiendo\nestrategia y equipos' },
+  { number: '20%', label: 'Más inscripciones\nU. de los Andes' },
+  { number: '75%', label: 'Más engagement\ntransformación digital' },
+  { number: '4.1M', label: 'Impresiones\ncampañas USA' }
 ];
 
 export const certifications = [
@@ -186,9 +186,9 @@ export const certifications = [
 ];
 
 export const aboutTags = [
-  'Diseño Estratégico', 'Marketing Digital', 'UX / UI', 'Comunicación Digital',
-  'IA Aplicada', 'Docencia', 'Design Thinking', 'CRM · Salesforce',
-  'Humanidades Digitales', 'Tecnología'
+  'Dirección Estratégica', 'Liderazgo de Equipos', 'Growth & Admisiones', 'Marketing Digital',
+  'CRM · Salesforce', 'Analítica de Datos', 'UX / CX', 'IA & Diseño Generativo',
+  'Comunicación Digital', 'Docencia & Investigación'
 ];
 
 export const clients = [

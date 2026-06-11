@@ -5,12 +5,13 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
 ---
 
 <section class="portfolio-sec" id="portafolio">
+  <span class="ghost" aria-hidden="true">Impacto</span>
   <div class="port-head">
     <div class="rv-l">
       <div class="s-tag"><div class="s-line"></div><span class="s-txt">Portafolio</span></div>
       <h2 class="sec">Proyectos<br>con <em>impacto.</em></h2>
     </div>
-    <p class="port-intro rv">Selección de campañas, investigaciones y proyectos de diseño estratégico con resultados medibles. Pasa el cursor sobre cada proyecto para ver descripción y métricas.</p>
+    <p class="port-intro rv">Proyectos que he dirigido para marcas globales e instituciones de referencia, con métricas verificables: campañas de millones de impresiones, exposiciones nacionales e investigación publicada. Pasa el cursor para ver resultados.</p>
   </div>
   <div class="port-grid">
     {featuredProjects.map((project, i) => (
@@ -54,6 +55,10 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
   .portfolio-sec {
     padding: 124px var(--edge);
     background: var(--warm);
+    /* contexto de apilamiento para la palabra fantasma (z-index: -1) */
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
   }
   .port-head {
     display: grid;
@@ -62,7 +67,7 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
     margin-bottom: 68px;
     align-items: end;
   }
-  .port-intro { font-size: 15.5px; line-height: 1.85; color: var(--fg2); }
+  .port-intro { font-size: 16.5px; line-height: 1.85; color: var(--fg2); }
   .port-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -120,7 +125,7 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
   }
   .pc-title {
     font-family: var(--serif);
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 600;
     color: #f4f0e8;
     line-height: 1.18;

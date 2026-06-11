@@ -9,8 +9,8 @@ interface Props {
 }
 
 const {
-  title = 'Camilo Ayala Monje — Diseño Estratégico, Marketing & Comunicación Digital',
-  description = 'Diseñador estratégico, profesor e investigador en diseño, marketing, tecnología, humanidades y comunicación digital. 12+ años creando experiencias que conectan marcas, instituciones y personas. Bogotá, Colombia.',
+  title = 'Camilo Ayala Monje — Estratega en Diseño, Marketing y Comunicación',
+  description = 'Estratega y líder en marketing, comunicación y diseño. 12+ años dirigiendo posicionamiento, crecimiento y transformación digital para Universidad de los Andes, Banco de la República, Universidad El Bosque y marcas globales como Marriott y Nokia. Magíster en Diseño, ponente internacional. Bogotá, Colombia.',
   image = '/assets/img/camilo-photo.jpg',
   url = 'https://camiloayala.com'
 } = Astro.props;
@@ -25,7 +25,7 @@ const canonicalURL = new URL(Astro.url.pathname, url);
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <script is:inline>if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('motion');</script>
   <meta name="description" content={description} />
-  <meta name="keywords" content="diseño estratégico, marketing digital, comunicación, IA, diseño generativo, UX/UI, profesor, bogotá" />
+  <meta name="keywords" content="estratega de marca, dirección de marketing, marketing educativo, admisiones, transformación digital, CRM, salesforce, IA, diseño generativo, UX/UI, conferencista, bogotá" />
   <meta name="author" content="Camilo Ayala Monje" />
   
   <!-- Open Graph / Facebook -->
@@ -71,7 +71,8 @@ const canonicalURL = new URL(Astro.url.pathname, url);
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Camilo Ayala Monje",
-      "jobTitle": "Diseñador Estratégico & Profesor",
+      "jobTitle": "Estratega en Diseño, Marketing y Comunicación · Coordinador de Admisiones y Profesor",
+      "award": "Ganador del concurso nacional de diseño de la moneda conmemorativa 90 años, Banco de la República (2015)",
       "url": "https://camiloayala.com",
       "image": "https://camiloayala.com/assets/img/camilo-photo.jpg",
       "sameAs": [
@@ -91,10 +92,13 @@ const canonicalURL = new URL(Astro.url.pathname, url);
       },
       "email": "camiloayalamonje [at] gmail.com",
       "knowsAbout": [
-        "Diseño Estratégico",
+        "Dirección Estratégica de Marca",
         "Marketing Digital",
+        "Marketing Educativo y Admisiones",
         "Comunicación",
         "UX/UI",
+        "CRM y Salesforce",
+        "Analítica de Datos",
         "Diseño Generativo",
         "IA",
         "Docencia",
@@ -104,7 +108,7 @@ const canonicalURL = new URL(Astro.url.pathname, url);
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Camilo Ayala Monje — Diseño Estratégico & Consultoría",
+      "name": "Camilo Ayala Monje — Estrategia, Diseño & Consultoría Ejecutiva",
       "url": "https://camiloayala.com",
       "image": "https://camiloayala.com/assets/img/camilo-photo.jpg",
       "email": "camiloayalamonje [at] gmail.com",
@@ -123,14 +127,14 @@ const canonicalURL = new URL(Astro.url.pathname, url);
       "priceRange": "$$",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Servicios de Diseño y Consultoría",
+        "name": "Servicios de Estrategia, Diseño y Consultoría Ejecutiva",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Estrategia de Marca", "description": "Posicionamiento, identidad y comunicación coherente para marcas que quieren diferenciarse con autoridad." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marketing Digital", "description": "SEO, SEM, CRM y analítica. Estrategias medibles con enfoque en conversión y crecimiento sostenido." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UX / UI Consulting", "description": "Experiencias digitales centradas en el usuario. Auditorías, rediseños y design systems de alto impacto." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personal Branding", "description": "Para académicos y profesionales que quieren construir presencia digital con autoridad en Latinoamérica." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Contenido & Curación", "description": "Estrategia editorial orientada a SEO. Redacción y distribución para audiencias en diseño, educación y tecnología." } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Talleres & Formación", "description": "Workshops de Design Thinking, branding e IA aplicada para equipos creativos, instituciones y empresas." } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dirección Estratégica de Marca", "description": "Posicionamiento institucional y arquitectura de marca para organizaciones que compiten por autoridad. Del diagnóstico al gobierno de marca." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Growth & Marketing Educativo", "description": "Captación y admisiones para instituciones educativas: embudos, experiencia del candidato y analítica." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Transformación Digital & CRM", "description": "SEO, SEM, Salesforce y analítica de datos al servicio de KPIs de negocio." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UX & Experiencia de Cliente", "description": "Auditorías, rediseños y design systems que alinean la experiencia digital con los objetivos del negocio." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "IA & Diseño Generativo", "description": "Adopción de IA en procesos creativos y de negocio, con respaldo académico e investigación publicada." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conferencias & Formación Ejecutiva", "description": "Keynotes y workshops para comités directivos y equipos: estrategia, Design Thinking e IA aplicada." } }
         ]
       }
     }

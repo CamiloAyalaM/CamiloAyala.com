@@ -3,13 +3,14 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
 ---
 
 <section class="about-sec" id="sobre">
+  <span class="ghost" aria-hidden="true">Diseño</span>
   <div class="about-l rv-l">
     <div class="s-tag"><div class="s-line"></div><span class="s-txt">Sobre mí</span></div>
-    <h2 class="sec">Pasión por el diseño,<br>la <em>tecnología</em><br>y la comunicación.</h2>
+    <h2 class="sec">Trayectoria que une<br><em>estrategia,</em><br>diseño y datos.</h2>
     <div class="about-copy">
-      <p>Soy Camilo Ayala Monje, bogotano, apasionado por el <strong>diseño, la tecnología y la comunicación</strong>. Experto en mercadeo y comunicación en educación, empresa privada y sector público.</p>
-      <p>Mi trabajo integra <strong>Design Thinking, UX/UI, estrategias de comunicación digital, SEM, SEO, CRM</strong> y análisis de datos. <em>Magíster en Diseño</em> con enfoque en mercadeo y estudios en Humanidades Digitales por la Universidad de los Andes.</p>
-      <p>Me caracterizan el <strong>liderazgo adaptativo</strong>, la comunicación asertiva y la creatividad. Diseño experiencias memorables que impactan positivamente a las personas y las organizaciones.</p>
+      <p>Soy Camilo Ayala Monje. He dirigido el <strong>mercadeo, la comunicación y la experiencia</strong> de instituciones líderes en Colombia: la Escuela de Gobierno y la Facultad de Ingeniería de la Universidad de los Andes, la Subgerencia Cultural del Banco de la República y, hoy, las admisiones de la Facultad de Creación y Comunicación de la Universidad El Bosque.</p>
+      <p>Mi enfoque une estrategia y ejecución — <strong>Design Thinking, UX/UI, SEO/SEM, CRM con Salesforce</strong> y análisis de datos — al servicio de resultados verificables: <em>+20% en inscripciones, +40% en tráfico y +75% en engagement</em>. Magíster en Diseño con estudios en Humanidades Digitales por la Universidad de los Andes.</p>
+      <p>Investigador publicado y ponente internacional (ECADE 2022, Oporto), gané el concurso nacional de diseño de la <strong>moneda conmemorativa de los 90 años del Banco de la República</strong>. Lidero equipos con visión adaptativa y diseño experiencias que mueven indicadores — y personas.</p>
     </div>
     <div class="atags">
       {aboutTags.map(tag => <span class="atag">{tag}</span>)}
@@ -74,9 +75,13 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
     align-items: start;
     /* transparente: deja ver el body (--cream) para el morphing de fondo */
     background: transparent;
+    /* contexto de apilamiento para la palabra fantasma (z-index: -1) */
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
   }
   .about-copy {
-    font-size: 15.5px;
+    font-size: 16.5px;
     line-height: 1.9;
     color: var(--fg2);
     margin-top: 28px;
@@ -186,7 +191,7 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
   }
   .edu-deg {
     font-family: var(--serif);
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     color: var(--fg);
     line-height: 1.22;
