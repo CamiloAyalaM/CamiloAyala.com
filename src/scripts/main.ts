@@ -3,12 +3,14 @@ import { initMotion } from './motion';
 import { initHeroCanvas } from './hero-canvas';
 import { initTextReveal } from './text-reveal';
 import { initScrollFx } from './scroll-fx';
+import { initCardsFx } from './cards-fx';
 
 try {
   initMotion();
   initHeroCanvas();
   initTextReveal();
   initScrollFx();
+  initCardsFx();
 } catch (err) {
   // Si algo falla, garantizar que el contenido quede visible (anti-FOUC)
   document.documentElement.classList.remove('motion');
