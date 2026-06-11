@@ -26,6 +26,8 @@ import ContactSection from '../components/sections/ContactSection.astro';
 </BaseLayout>
 
 <script>
+  import '../scripts/main';
+
   // Intersection Observer — reveal on scroll
   const revealObs = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -41,23 +43,7 @@ import ContactSection from '../components/sections/ContactSection.astro';
   // ── All remaining animations respect prefers-reduced-motion ──────────────
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
-    // 1. Hero photo parallax — photo drifts up at 30% of scroll speed
-    const heroPhoto = document.querySelector<HTMLElement>('.hero-photo');
-    if (heroPhoto) {
-      let ticking = false;
-      window.addEventListener('scroll', () => {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            const sy = window.scrollY;
-            if (sy < window.innerHeight * 1.5) {
-              heroPhoto.style.transform = `translateY(${sy * 0.3}px)`;
-            }
-            ticking = false;
-          });
-          ticking = true;
-        }
-      }, { passive: true });
-    }
+    // 1. Hero photo parallax — migrado a ScrollTrigger en src/scripts/motion.ts
 
     // 2. Animated counters for Highlights strip
     function animateCounter(el: HTMLElement, target: number, suffix: string) {
