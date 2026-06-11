@@ -401,8 +401,8 @@ body.hide-cursor #curl {
   height: 100%;
   z-index: 1;
   pointer-events: none;
-  -webkit-mask-image: radial-gradient(ellipse 75% 110% at 28% 50%, #000 35%, transparent 75%);
-  mask-image: radial-gradient(ellipse 75% 110% at 28% 50%, #000 35%, transparent 75%);
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 34%, transparent 52%);
+  mask-image: linear-gradient(to right, #000 0%, #000 34%, transparent 52%);
 }
 
 @media (max-width: 768px) {
@@ -645,8 +645,8 @@ body.hide-cursor #curl {
 @media (max-width: 768px) {
   :root { --edge: 20px; }
 
-  nav { padding: 14px var(--edge) !important; }
-  .nav-links { display: none; }
+  nav { padding: 10px var(--edge) !important; }
+  .nav-links { display: none !important; }
 
   .hero {
     grid-template-columns: 1fr;

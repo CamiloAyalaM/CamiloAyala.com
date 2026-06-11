@@ -102,18 +102,32 @@
     transform: translateY(-1px);
   }
 
-  @media (max-width: 768px) {
-    nav {
-      padding: 16px var(--edge);
+  @media (max-width: 1024px) {
+    .nav-links {
+      gap: 22px;
     }
 
+    .nav-links a {
+      font-size: 9.5px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      padding: 10px var(--edge);
+    }
+
+    /* En mobile el menú desaparece: queda logo + CTA en barra compacta */
     .nav-links {
-      gap: 20px;
-      font-size: 9px;
+      display: none;
+    }
+
+    .nav-logo img {
+      height: 21px;
     }
 
     .nav-cta {
-      padding: 8px 16px;
+      padding: 7px 14px;
       font-size: 9px;
     }
   }
