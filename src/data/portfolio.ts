@@ -124,9 +124,9 @@ export const services = [
   {
     number: '06',
     title: 'Conferencias & Formación Ejecutiva',
-    description: 'Keynotes y workshops para comités directivos y equipos: estrategia, Design Thinking e IA aplicada. Ponente internacional.',
-    tags: ['Keynotes', 'Design Thinking', 'IA'],
-    fullDescription: 'Conferencias y programas de formación para directivos y equipos creativos, con experiencia como ponente internacional (ECADE 2022, Oporto) y profesor universitario en tres universidades colombianas.'
+    description: 'Keynotes, workshops y docencia de posgrado en marketing e IA para directivos (ESEIT). Ponente internacional.',
+    tags: ['Keynotes', 'Posgrado', 'IA'],
+    fullDescription: 'Conferencias y programas de formación para directivos: profesor de las especializaciones en Gerencia Comercial y en Marketing e Inteligencia Artificial (ESEIT), ponente internacional (ECADE 2022, Oporto).'
   }
 ];
 
@@ -157,9 +157,9 @@ export const credentials = [
   },
   {
     number: '05',
-    title: 'Investigador publicado y ponente internacional',
-    subtitle: 'Paper peer-reviewed (DOI) · ECADE 2022, Oporto · Magíster en Diseño, Uniandes',
-    description: 'Tesis y publicación internacional sobre diseño generativo y co-creación con pensamiento computacional. Profesor universitario en tres universidades colombianas.'
+    title: 'Profesor de posgrado en Marketing e IA — ESEIT',
+    subtitle: 'Gerencia Comercial · Marketing e Inteligencia Artificial · Investigador publicado (DOI)',
+    description: 'Formo a directivos en estrategia comercial e impacto real de la IA en las decisiones de negocio. Ponente internacional (ECADE 2022, Oporto) y Magíster en Diseño, Uniandes.'
   }
 ];
 

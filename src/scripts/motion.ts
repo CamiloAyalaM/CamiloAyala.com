@@ -61,7 +61,7 @@ function initHeroParallax(): void {
   const hero = document.querySelector<HTMLElement>('.hero');
   if (!heroPhoto || !hero) return;
   gsap.to(heroPhoto, {
-    y: () => hero.offsetHeight * 0.3,
+    y: () => hero.offsetHeight * 0.16,
     ease: 'none',
     scrollTrigger: {
       trigger: hero,
