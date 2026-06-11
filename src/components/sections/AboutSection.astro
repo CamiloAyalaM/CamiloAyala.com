@@ -3,6 +3,7 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
 ---
 
 <section class="about-sec" id="sobre">
+  <span class="ghost" aria-hidden="true">Diseño</span>
   <div class="about-l rv-l">
     <div class="s-tag"><div class="s-line"></div><span class="s-txt">Sobre mí</span></div>
     <h2 class="sec">Pasión por el diseño,<br>la <em>tecnología</em><br>y la comunicación.</h2>
@@ -74,9 +75,13 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
     align-items: start;
     /* transparente: deja ver el body (--cream) para el morphing de fondo */
     background: transparent;
+    /* contexto de apilamiento para la palabra fantasma (z-index: -1) */
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
   }
   .about-copy {
-    font-size: 15.5px;
+    font-size: 16.5px;
     line-height: 1.9;
     color: var(--fg2);
     margin-top: 28px;
@@ -186,7 +191,7 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
   }
   .edu-deg {
     font-family: var(--serif);
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     color: var(--fg);
     line-height: 1.22;

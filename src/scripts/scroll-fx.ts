@@ -11,6 +11,27 @@ export function initScrollFx(): void {
   initScrollSpy();
   initBgMorph();
   initMarquee();
+  initGhosts();
+}
+
+/** Parallax sutil de las palabras fantasma de fondo. */
+function initGhosts(): void {
+  document.querySelectorAll<HTMLElement>('.ghost').forEach((ghost) => {
+    gsap.fromTo(
+      ghost,
+      { yPercent: 22 },
+      {
+        yPercent: -22,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: ghost.parentElement,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+        },
+      }
+    );
+  });
 }
 
 /** Hairline dorada fija arriba (2px) con scaleX scrubbed. */

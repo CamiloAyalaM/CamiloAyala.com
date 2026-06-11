@@ -133,7 +133,7 @@ nav.compact {
 
 .nav-links a {
   font-family: var(--mono);
-  font-size: 10.5px;
+  font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: rgba(244, 240, 232, 0.38);
@@ -254,7 +254,7 @@ nav.compact {
 }
 .sec {
   font-family: var(--serif);
-  font-size: clamp(32px, 3.9vw, 54px);
+  font-size: clamp(36px, 4.6vw, 64px);
   font-weight: 400;
   line-height: 1.04;
   letter-spacing: -.012em;
@@ -348,6 +348,29 @@ body.hide-cursor #curl {
 .motion .h1 em.drawn::after,
 .motion .sec em.drawn::after {
   transform: scaleX(1);
+}
+
+/* PALABRA FANTASMA — tipografía gigante perfilada detrás de secciones */
+.ghost {
+  position: absolute;
+  z-index: -1;
+  top: 2%;
+  right: -2vw;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(130px, 19vw, 310px);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--gold15);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+@supports not (-webkit-text-stroke: 1px #000) {
+  .ghost {
+    color: var(--gold08);
+  }
 }
 
 /* NOISE OVERLAY */
@@ -490,7 +513,7 @@ body.hide-cursor #curl {
 
 .ey-txt {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: .24em;
   color: var(--gold);
   text-transform: uppercase;
@@ -501,12 +524,12 @@ body.hide-cursor #curl {
 /* H1 */
 .h1 {
   font-family: var(--serif);
-  font-size: clamp(50px, 6.4vw, 92px);
+  font-size: clamp(54px, 7.6vw, 118px);
   font-weight: 400;
-  line-height: .91;
+  line-height: .93;
   letter-spacing: -.02em;
   color: rgba(244,240,232,.97);
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
 .h1 em {
@@ -517,10 +540,10 @@ body.hide-cursor #curl {
 
 /* HERO DESC */
 .hero-desc {
-  font-size: 15px;
+  font-size: 16.5px;
   line-height: 1.85;
-  color: rgba(218,208,192,.76);
-  max-width: 434px;
+  color: rgba(218,208,192,.78);
+  max-width: 480px;
   margin-bottom: 46px;
   opacity: 0;
   animation: f-up .85s ease .78s forwards;
@@ -662,7 +685,7 @@ body.hide-cursor #curl {
     min-height: auto;
     order: 1;
   }
-  .h1 { font-size: clamp(42px, 12vw, 62px); }
+  .h1 { font-size: clamp(46px, 13.5vw, 72px); }
   .hero-stats {
     flex-wrap: wrap;
     gap: 14px;
