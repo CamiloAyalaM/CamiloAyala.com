@@ -38,7 +38,7 @@ import { services } from '../../data/portfolio';
     gap: 88px;
     margin-bottom: 64px;
   }
-  .srv-intro { font-size: 16.5px; line-height: 1.85; color: rgba(218,208,192,.66); padding-top: 10px; }
+  .srv-intro { font-size: 17px; line-height: 1.85; color: rgba(218,208,192,.66); padding-top: 10px; }
   .srv-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -73,10 +73,23 @@ import { services } from '../../data/portfolio';
     height: 100%;
     transition: height .42s ease 0s;
   }
-  .srv-n { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; color: var(--gold); margin-bottom: 22px; }
+  /* Numeral monumental perfilado en dorado */
+  .srv-n {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 58px;
+    font-weight: 600;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--gold25);
+    margin-bottom: 20px;
+  }
+  @supports not (-webkit-text-stroke: 1px #000) {
+    .srv-n { color: var(--gold15); }
+  }
   .srv-title { font-family: var(--serif); font-size: 26px; font-weight: 600; color: rgba(244,240,232,.97); margin-bottom: 11px; }
   .srv-desc {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.8;
     color: rgba(244,240,232,.86);
     font-weight: 500;
@@ -85,7 +98,7 @@ import { services } from '../../data/portfolio';
   .srv-tags { display: flex; flex-wrap: wrap; gap: 5px; }
   .srv-tag {
     font-family: var(--mono);
-    font-size: 8.5px;
+    font-size: 9.5px;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: rgba(182,144,58,.52);
