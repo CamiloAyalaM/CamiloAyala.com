@@ -82,6 +82,17 @@ body {
   will-change: transform, width, height;
 }
 
+/* En touch no hay cursor custom */
+@media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+  #cur,
+  #curl {
+    display: none;
+  }
+}
+
 /* NAV */
 nav {
   position: fixed;

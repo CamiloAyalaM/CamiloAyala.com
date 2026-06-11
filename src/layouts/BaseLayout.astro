@@ -145,7 +145,8 @@ const canonicalURL = new URL(Astro.url.pathname, url);
   <slot />
   
   <script defer>
-    // Custom cursor
+    // Custom cursor — solo en dispositivos con puntero fino
+    if (window.matchMedia('(pointer: fine)').matches) {
     const cur = document.getElementById('cur');
     const curl = document.getElementById('curl');
     let rx = 0, ry = 0;
@@ -179,6 +180,7 @@ const canonicalURL = new URL(Astro.url.pathname, url);
         curl.style.height = '30px';
       });
     });
+    }
   </script>
 </body>
 </html>
