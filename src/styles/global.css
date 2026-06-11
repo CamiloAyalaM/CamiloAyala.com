@@ -252,6 +252,28 @@ nav.compact {
 .sec.dk { color: rgba(244,240,232,.97); }
 .sec.dk em { color: var(--gold); }
 
+/* BARRA DE PROGRESO DE LECTURA (creada por JS) */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: 400;
+  pointer-events: none;
+}
+
+/* SCROLL-SPY — enlace activo del nav */
+.nav-links a.active {
+  color: rgba(244, 240, 232, 0.85);
+}
+.nav-links a.active::after {
+  width: 100%;
+}
+
 /* TIPOGRAFÍA EN MOVIMIENTO — split por palabras (.w máscara / .wi palabra) */
 .motion .h1,
 .motion .sec {
