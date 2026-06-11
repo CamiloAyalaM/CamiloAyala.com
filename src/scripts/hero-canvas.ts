@@ -56,7 +56,7 @@ export function initHeroCanvas(): void {
     canvas!.height = Math.round(h * dpr);
     ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx!.lineCap = 'round';
-    const count = isMobile ? 120 : Math.round(Math.min(600, Math.max(300, (w * h) / 2600)));
+    const count = isMobile ? 100 : Math.round(Math.min(320, Math.max(180, (w * h) / 5200)));
     particles = Array.from({ length: count }, () => spawn());
   }
 
@@ -65,7 +65,7 @@ export function initHeroCanvas(): void {
     const y = Math.random() * h;
     const goldish = Math.random() < 0.65;
     const [r, g, b] = goldish ? GOLD : GOLDT;
-    const a = 0.08 + Math.random() * 0.12;
+    const a = 0.05 + Math.random() * 0.09;
     return {
       x,
       y,
@@ -75,7 +75,7 @@ export function initHeroCanvas(): void {
       life: 0,
       maxLife: 240 + Math.random() * 360,
       color: `rgba(${r},${g},${b},${a})`,
-      width: 0.5 + Math.random() * 0.6,
+      width: 0.4 + Math.random() * 0.5,
     };
   }
 
@@ -115,7 +115,7 @@ export function initHeroCanvas(): void {
 
   function fade(): void {
     ctx!.globalCompositeOperation = 'destination-out';
-    ctx!.fillStyle = 'rgba(0,0,0,0.032)';
+    ctx!.fillStyle = 'rgba(0,0,0,0.05)';
     ctx!.fillRect(0, 0, w, h);
     ctx!.globalCompositeOperation = 'source-over';
   }
