@@ -12,7 +12,7 @@ import { services } from '../../data/portfolio';
   </div>
   <div class="srv-grid">
     {services.map((srv, i) => (
-      <div class="srv-card rv" style={`transition-delay: ${i * 0.07}s`}>
+      <div class="srv-card rv" style={`--rv-delay: ${i * 0.07}s`}>
         <div class="srv-n">{srv.number}</div>
         <h3 class="srv-title">{srv.title}</h3>
         <div class="srv-desc">{srv.description}</div>
@@ -51,7 +51,11 @@ import { services } from '../../data/portfolio';
     padding: 40px 36px;
     position: relative;
     overflow: hidden;
-    transition: transform .35s cubic-bezier(.22,1,.36,1), background .28s;
+    transition:
+      opacity var(--rv-op) var(--ease-rv) var(--rv-delay, 0s),
+      translate var(--rv-mv) var(--ease-rv) var(--rv-delay, 0s),
+      transform .35s cubic-bezier(.22,1,.36,1),
+      background .28s;
   }
   .srv-card:hover {
     transform: translateY(-6px);

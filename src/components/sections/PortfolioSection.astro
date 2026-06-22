@@ -36,7 +36,7 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
   <div class="cl-hd rv">Organizaciones con las que he trabajado</div>
   <div class="cl-grid">
     {clients.map((client, i) => (
-      <div class="cl-item rv" style={`transition-delay: ${i * 0.04}s`}>
+      <div class="cl-item rv" style={`--rv-delay: ${i * 0.04}s`}>
         <div class="cl-logo" style={`background: ${client.bg}`}>
           <img src={client.logo} alt={client.name} loading="lazy" style={client.scale ? `transform: scale(${client.scale})` : ''} />
         </div>
@@ -178,7 +178,11 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
     align-items: center;
     justify-content: center;
     gap: 16px;
-    transition: transform .3s cubic-bezier(.22,1,.36,1);
+    transition:
+      opacity var(--rv-op) var(--ease-rv) var(--rv-delay, 0s),
+      translate var(--rv-mv) var(--ease-rv) var(--rv-delay, 0s),
+      scale var(--rv-mv) var(--ease-rv) var(--rv-delay, 0s),
+      transform .3s cubic-bezier(.22,1,.36,1);
     min-height: 168px;
   }
   .cl-item:hover { transform: translateY(-5px); }

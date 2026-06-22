@@ -55,7 +55,11 @@ if (daysAgo < 7) {
     background: var(--bg);
     padding: 2rem;
     border-radius: 22px;
-    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+    transition:
+      opacity var(--rv-op) var(--ease-rv) var(--rv-delay, 0s),
+      translate var(--rv-mv) var(--ease-rv) var(--rv-delay, 0s),
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s ease;
     text-decoration: none;
     color: inherit;
     display: flex;

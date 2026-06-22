@@ -38,6 +38,12 @@
   /* Layout */
   --edge: max(48px, calc(50vw - 660px));
   --measure: 720px;
+
+  /* Reveal al entrar en viewport (curva progresiva + tiempos amplios) */
+  --ease-rv: cubic-bezier(0.33, 0, 0.25, 1);
+  --rv-op: 1.5s;   /* duración del fade  */
+  --rv-mv: 1.7s;   /* duración del desplazamiento */
+  --rv-dist: 64px; /* distancia del desplazamiento */
 }
 
 html {
@@ -181,24 +187,22 @@ nav.compact {
    REVEAL ON SCROLL
 ============================================================ */
 /* Reveal al entrar en viewport.
-   - opacity: curva casi lineal (cubic-bezier .33,0,.2,1) y duración amplia →
-     fade-in claramente perceptible, no un "pop".
-   - transform: easeOutQuint (.22,1,.36,1) → desliza hacia arriba y desacelera
-     con elegancia, sin el latigazo de expo.
-   El stagger entre tarjetas viene del transition-delay inline en el markup. */
+   Se usa la propiedad independiente `translate` (no `transform`) para el
+   desplazamiento: así el reveal no choca con el `transform` del hover de las
+   tarjetas, que tiene su propia duración. El fade (opacity) y el movimiento
+   comparten una curva progresiva y tiempos amplios para que se aprecien bien.
+   El stagger entre tarjetas viene del transition-delay / --rv-delay del markup. */
 .rv,
 .rv-l {
   opacity: 0;
-  transform: translate3d(0, 70px, 0);
-  transition: opacity 1.2s cubic-bezier(0.33, 0, 0.2, 1),
-    transform 1.5s cubic-bezier(0.33, 0, 0.2, 1);
-  will-change: transform, opacity;
+  translate: 0 var(--rv-dist);
+  transition: opacity var(--rv-op) var(--ease-rv),
+    translate var(--rv-mv) var(--ease-rv);
 }
 .rv.in,
 .rv-l.in {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
-  will-change: auto;
+  translate: 0 0;
 }
 
 /* ============================================================
@@ -509,12 +513,14 @@ nav.compact {
   .hero-desc { font-size: 17px; }
 }
 
-/* Reveal con escala sutil para logos de clientes */
+/* Reveal con escala sutil para logos de clientes (props independientes) */
 .cl-item.rv {
-  transform: translateY(16px) scale(0.97);
+  translate: 0 var(--rv-dist);
+  scale: 0.96;
 }
 .cl-item.rv.in {
-  transform: none;
+  translate: 0 0;
+  scale: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -523,6 +529,6 @@ nav.compact {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .rv, .rv-l { opacity: 1; transform: none; }
+  .rv, .rv-l, .cl-item.rv { opacity: 1; translate: 0 0; scale: 1; transform: none; }
   html { scroll-behavior: auto; }
 }

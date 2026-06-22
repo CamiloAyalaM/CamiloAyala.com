@@ -34,14 +34,14 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
     <h2 class="sec rv" style="transition-delay:.06s">Educación &amp; <em>certificaciones.</em></h2>
   </div>
   <div class="edu-grid">
-    <div class="edu-card rv" style="transition-delay:.08s">
+    <div class="edu-card rv" style="--rv-delay:.08s">
       <div class="edu-yr">2019 – 2021</div>
       <div class="edu-deg">Magíster en Diseño</div>
       <div class="edu-sch">Universidad de los Andes · Bogotá</div>
       <div class="edu-desc">Enfoque en mercadeo y co-creación computacional. Investigación sobre diseño generativo e IA. Intersección entre tecnología, humanidades digitales y diseño. Archivos digitales y colecciones.</div>
       <span class="edu-badge">Titulado</span>
     </div>
-    <div class="edu-card rv" style="transition-delay:.15s">
+    <div class="edu-card rv" style="--rv-delay:.15s">
       <div class="edu-yr">2004 – 2009</div>
       <div class="edu-deg">Diseño Gráfico — B.F.A.</div>
       <div class="edu-sch">Universidad Jorge Tadeo Lozano · Bogotá</div>
@@ -155,7 +155,11 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
     padding: 40px 36px;
     position: relative;
     overflow: hidden;
-    transition: transform .35s cubic-bezier(.22,1,.36,1), background .28s;
+    transition:
+      opacity var(--rv-op) var(--ease-rv) var(--rv-delay, 0s),
+      translate var(--rv-mv) var(--ease-rv) var(--rv-delay, 0s),
+      transform .35s cubic-bezier(.22,1,.36,1),
+      background .28s;
   }
   .edu-card:hover { transform: translateY(-6px); background: #eeeef0; }
   .edu-yr {
