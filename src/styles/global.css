@@ -189,9 +189,9 @@ nav.compact {
 .rv,
 .rv-l {
   opacity: 0;
-  transform: translate3d(0, 42px, 0);
-  transition: opacity 1s cubic-bezier(0.33, 0, 0.2, 1),
-    transform 1.15s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translate3d(0, 70px, 0);
+  transition: opacity 1.2s cubic-bezier(0.33, 0, 0.2, 1),
+    transform 1.5s cubic-bezier(0.33, 0, 0.2, 1);
   will-change: transform, opacity;
 }
 .rv.in,
