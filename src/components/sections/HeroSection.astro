@@ -4,24 +4,6 @@ import { highlights } from '../../data/portfolio';
 
 <section class="hero" id="inicio">
   <div class="hero-photo"></div>
-  <div class="hero-orbits" aria-hidden="true">
-    <svg viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="400" cy="400" r="90" stroke="rgba(182,144,58,.28)" stroke-width="1"/>
-      <g class="orb orb-1">
-        <circle cx="400" cy="400" r="180" stroke="rgba(182,144,58,.22)" stroke-width="1" stroke-dasharray="3 7"/>
-        <circle cx="580" cy="400" r="3.5" fill="rgba(208,168,80,.85)"/>
-      </g>
-      <g class="orb orb-2">
-        <circle cx="400" cy="400" r="280" stroke="rgba(182,144,58,.16)" stroke-width="1" stroke-dasharray="520 240"/>
-        <circle cx="400" cy="120" r="2.5" fill="rgba(182,144,58,.7)"/>
-      </g>
-      <g class="orb orb-3">
-        <circle cx="400" cy="400" r="385" stroke="rgba(182,144,58,.12)" stroke-width="1" stroke-dasharray="900 320"/>
-        <circle cx="785" cy="400" r="3" fill="rgba(208,168,80,.55)"/>
-      </g>
-    </svg>
-  </div>
-  <div class="noise"></div>
   <div class="hero-left">
     <div class="eyebrow">
       <span class="ey-dash"></span>
@@ -91,14 +73,13 @@ import { highlights } from '../../data/portfolio';
 
 <style>
   /* ============================================
-     MARQUEE
+     MARQUEE — cinta de instituciones, limpia sobre claro
   ============================================ */
   .mq-wrap {
-    border-top: 1px solid var(--dline);
-    border-bottom: 1px solid var(--dline);
-    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+    padding: 26px 0;
     overflow: hidden;
-    background: var(--ink);
+    background: var(--bg);
     position: relative;
     z-index: 5;
   }
@@ -112,55 +93,55 @@ import { highlights } from '../../data/portfolio';
   .mq-item {
     display: flex;
     align-items: center;
-    gap: 24px;
-    padding: 0 24px;
+    gap: 22px;
+    padding: 0 22px;
     white-space: nowrap;
   }
   .mq-dot {
-    width: 4px;
-    height: 4px;
+    width: 3px;
+    height: 3px;
     background: var(--gold);
     border-radius: 50%;
     flex-shrink: 0;
-    opacity: .6;
+    opacity: .55;
   }
   .mq-txt {
-    font-family: var(--mono);
-    font-size: 12px;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: rgba(244, 240, 232, .45);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--muted);
   }
 
   /* ============================================
-     HIGHLIGHTS — gold strip
+     HIGHLIGHTS — cifras grandes sobre fondo claro
   ============================================ */
   .highlights {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background: var(--gold);
+    background: var(--bg);
+    padding: 96px var(--edge);
+    gap: 48px 32px;
   }
   .hl {
-    padding: 54px 38px;
     text-align: center;
-    border-right: 1px solid rgba(13,11,9,.12);
   }
-  .hl:last-child { border-right: none; }
   .hl-n {
-    font-family: var(--serif);
-    font-size: clamp(46px, 5.2vw, 78px);
-    font-weight: 700;
-    color: var(--ink);
+    font-family: var(--display);
+    font-size: clamp(48px, 5.6vw, 84px);
+    font-weight: 600;
+    color: var(--fg);
     line-height: 1;
+    letter-spacing: -0.03em;
   }
-  .hl-n sup { font-size: .45em; vertical-align: super; }
+  .hl-n sup { font-size: .45em; vertical-align: super; color: var(--gold); }
   .hl-l {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: rgba(13,11,9,.45);
-    margin-top: 10px;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--muted);
+    margin-top: 14px;
     line-height: 1.5;
     white-space: pre-line;
   }
@@ -169,8 +150,9 @@ import { highlights } from '../../data/portfolio';
      RESPONSIVE
   ============================================ */
   @media (max-width: 1024px) {
-    .highlights { grid-template-columns: repeat(2, 1fr); }
-    .hl:nth-child(even) { border-right: none; }
-    .hl:nth-child(n+3) { border-top: 1px solid rgba(13,11,9,.12); }
+    .highlights { grid-template-columns: repeat(2, 1fr); gap: 56px 24px; }
+  }
+  @media (max-width: 768px) {
+    .highlights { padding: 72px 22px; gap: 44px 20px; }
   }
 </style>

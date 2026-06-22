@@ -1,54 +1,13 @@
 /**
- * Scroll rico: barra de progreso de lectura, scroll-spy del nav,
- * morphing de fondo entre bloques oscuro/claro existentes y marquee
- * de skills reactivo a la velocidad de scroll.
+ * Scroll rico (estética limpia): scroll-spy del nav y marquee de
+ * instituciones reactivo a la velocidad de scroll.
  */
-import { gsap, ScrollTrigger, lenis, reducedMotion } from './motion';
+import { gsap, lenis, ScrollTrigger, reducedMotion } from './motion';
 
 export function initScrollFx(): void {
   if (reducedMotion) return;
-  initProgressBar();
   initScrollSpy();
-  initBgMorph();
   initMarquee();
-  initGhosts();
-}
-
-/** Parallax sutil de las palabras fantasma de fondo. */
-function initGhosts(): void {
-  document.querySelectorAll<HTMLElement>('.ghost').forEach((ghost) => {
-    gsap.fromTo(
-      ghost,
-      { yPercent: 22 },
-      {
-        yPercent: -22,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: ghost.parentElement,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: true,
-        },
-      }
-    );
-  });
-}
-
-/** Hairline dorada fija arriba (2px) con scaleX scrubbed. */
-function initProgressBar(): void {
-  const bar = document.createElement('div');
-  bar.className = 'scroll-progress';
-  bar.setAttribute('aria-hidden', 'true');
-  document.body.appendChild(bar);
-  gsap.fromTo(
-    bar,
-    { scaleX: 0 },
-    {
-      scaleX: 1,
-      ease: 'none',
-      scrollTrigger: { start: 0, end: 'max', scrub: 0.3 },
-    }
-  );
 }
 
 /** Resalta en el nav el enlace de la sección dominante. */
@@ -75,30 +34,6 @@ function initScrollSpy(): void {
       },
     });
   });
-}
-
-/**
- * Morphing del fondo del body en la transición oscuro→claro existente
- * (servicios sobre --ink → sobre mí sobre --cream). Las secciones claras
- * son transparentes y dejan ver el body, cuyo color se interpola.
- */
-function initBgMorph(): void {
-  const about = document.querySelector('.about-sec');
-  if (!about) return;
-  gsap.fromTo(
-    document.body,
-    { backgroundColor: '#0d0b09' },
-    {
-      backgroundColor: '#f4f0e8',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: about,
-        start: 'top bottom',
-        end: 'top 55%',
-        scrub: true,
-      },
-    }
-  );
 }
 
 /** El marquee de skills responde a la velocidad de scroll (lenis.velocity). */

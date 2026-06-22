@@ -55,20 +55,47 @@ function initAnchorLinks(): void {
   });
 }
 
-/** Parallax de la foto del hero, antes con listener manual de scroll. */
+/**
+ * Hero scroll-driven: la foto escala y se desplaza, y el texto se desvanece
+ * suavemente al salir — gesto cinematográfico tipo Apple.
+ */
 function initHeroParallax(): void {
   const heroPhoto = document.querySelector<HTMLElement>('.hero-photo');
+  const heroLeft = document.querySelector<HTMLElement>('.hero-left');
   const hero = document.querySelector<HTMLElement>('.hero');
-  if (!heroPhoto || !hero) return;
-  gsap.to(heroPhoto, {
-    y: () => hero.offsetHeight * 0.16,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: hero,
-      start: 'top top',
-      end: 'bottom top',
-      scrub: true,
-      invalidateOnRefresh: true,
-    },
-  });
+  if (!hero) return;
+
+  if (heroPhoto) {
+    gsap.fromTo(
+      heroPhoto,
+      { scale: 1, yPercent: 0 },
+      {
+        scale: 1.14,
+        yPercent: 10,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: hero,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      }
+    );
+  }
+
+  if (heroLeft) {
+    gsap.to(heroLeft, {
+      yPercent: -14,
+      autoAlpha: 0,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: hero,
+        start: 'top top',
+        end: 'bottom 30%',
+        scrub: true,
+        invalidateOnRefresh: true,
+      },
+    });
+  }
 }

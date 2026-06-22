@@ -15,7 +15,7 @@ const featuredPosts = getFeaturedPosts().slice(0, 3);
   </div>
   <div class="li-grid">
     {featuredPosts.map((post, i) => (
-      <div class="li-card-wrap rv" style={`transition-delay: ${i * 0.09}s`}>
+      <div class="li-card-wrap" style={`--rv-delay: ${i * 0.09}s`}>
         <BlogCard {...post} />
       </div>
     ))}
@@ -34,20 +34,20 @@ const featuredPosts = getFeaturedPosts().slice(0, 3);
 
 <style>
   /* ============================================
-     BLOG / LINKEDIN
+     BLOG / LINKEDIN — claro
   ============================================ */
   .li-sec {
-    padding: 124px var(--edge);
-    background: transparent;
+    padding: 140px var(--edge);
+    background: var(--bg2);
   }
   .li-head {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 88px;
-    margin-bottom: 68px;
+    gap: 80px;
+    margin-bottom: 72px;
     align-items: end;
   }
-  .li-intro { font-size: 17px; line-height: 1.85; color: var(--fg2); }
+  .li-intro { font-size: 19px; line-height: 1.6; color: var(--fg2); }
   .li-intro a {
     color: var(--gold);
     text-decoration: none;
@@ -58,59 +58,62 @@ const featuredPosts = getFeaturedPosts().slice(0, 3);
   .li-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 24px;
   }
   .li-card-wrap { display: contents; }
   .li-banner {
-    margin-top: 44px;
-    border: 1px solid var(--gold25);
-    padding: 32px 40px;
+    margin-top: 48px;
+    border-radius: 26px;
+    padding: 44px 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
-    background: white;
+    gap: 28px;
+    background: var(--dark);
   }
   .li-banner-t h3 {
-    font-family: var(--serif);
+    font-family: var(--display);
     font-size: 28px;
     font-weight: 600;
-    color: var(--fg);
-    margin-bottom: 5px;
+    letter-spacing: -0.02em;
+    color: var(--don);
+    margin-bottom: 8px;
+    line-height: 1.15;
   }
-  .li-banner-t p { font-size: 13.5px; color: var(--muted); }
+  .li-banner-t p { font-size: 15px; color: var(--don2); }
   .li-banner-a {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: .11em;
-    text-transform: uppercase;
-    color: var(--ink);
-    background: var(--gold);
-    padding: 14px 30px;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #0a0a0a;
+    background: var(--don);
+    padding: 13px 28px;
+    border-radius: 980px;
     text-decoration: none;
     white-space: nowrap;
     display: flex;
     align-items: center;
-    gap: 11px;
+    gap: 10px;
     transition: background .2s, transform .18s;
     flex-shrink: 0;
   }
-  .li-banner-a:hover { background: var(--goldt); transform: translateY(-1px); }
-  .li-banner-a svg { width: 14px; height: 14px; fill: var(--ink); }
+  .li-banner-a:hover { background: #fff; transform: scale(1.03); }
+  .li-banner-a svg { width: 16px; height: 16px; fill: #0a0a0a; }
 
   /* ============================================
      RESPONSIVE
   ============================================ */
   @media (max-width: 1140px) {
-    .li-sec { padding-left: 32px; padding-right: 32px; }
+    .li-sec { padding-left: 28px; padding-right: 28px; }
   }
   @media (max-width: 1024px) {
-    .li-head { grid-template-columns: 1fr; gap: 24px; }
+    .li-head { grid-template-columns: 1fr; gap: 28px; }
     .li-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 768px) {
-    .li-sec { padding: 80px 20px; }
+    .li-sec { padding: 90px 22px; }
     .li-grid { grid-template-columns: 1fr; }
-    .li-banner { flex-direction: column; align-items: flex-start; }
+    .li-banner { flex-direction: column; align-items: flex-start; padding: 32px 28px; }
   }
 </style>

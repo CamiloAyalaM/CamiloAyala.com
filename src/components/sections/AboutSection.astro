@@ -3,7 +3,6 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
 ---
 
 <section class="about-sec" id="sobre">
-  <span class="ghost" aria-hidden="true">Diseño</span>
   <div class="about-l rv-l">
     <div class="s-tag"><div class="s-line"></div><span class="s-txt">Sobre mí</span></div>
     <h2 class="sec">Trayectoria que une<br><em>estrategia,</em><br>diseño y datos.</h2>
@@ -35,14 +34,14 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
     <h2 class="sec rv" style="transition-delay:.06s">Educación &amp; <em>certificaciones.</em></h2>
   </div>
   <div class="edu-grid">
-    <div class="edu-card rv" style="transition-delay:.08s">
+    <div class="edu-card rv" style="--rv-delay:.08s">
       <div class="edu-yr">2019 – 2021</div>
       <div class="edu-deg">Magíster en Diseño</div>
       <div class="edu-sch">Universidad de los Andes · Bogotá</div>
       <div class="edu-desc">Enfoque en mercadeo y co-creación computacional. Investigación sobre diseño generativo e IA. Intersección entre tecnología, humanidades digitales y diseño. Archivos digitales y colecciones.</div>
       <span class="edu-badge">Titulado</span>
     </div>
-    <div class="edu-card rv" style="transition-delay:.15s">
+    <div class="edu-card rv" style="--rv-delay:.15s">
       <div class="edu-yr">2004 – 2009</div>
       <div class="edu-deg">Diseño Gráfico — B.F.A.</div>
       <div class="edu-sch">Universidad Jorge Tadeo Lozano · Bogotá</div>
@@ -65,27 +64,24 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
 
 <style>
   /* ============================================
-     ABOUT
+     ABOUT — claro, columna de lectura con aire
   ============================================ */
   .about-sec {
-    padding: 124px var(--edge);
+    padding: 140px var(--edge);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 88px;
+    gap: 80px;
     align-items: start;
-    /* transparente: deja ver el body (--cream) para el morphing de fondo */
-    background: transparent;
-    /* contexto de apilamiento para la palabra fantasma (z-index: -1) */
+    background: var(--bg2);
     position: relative;
     z-index: 0;
-    overflow: hidden;
   }
   .about-copy {
-    font-size: 17px;
-    line-height: 1.9;
+    font-size: 18px;
+    line-height: 1.7;
     color: var(--fg2);
-    margin-top: 28px;
-    max-width: 470px;
+    margin-top: 32px;
+    max-width: 480px;
   }
   .about-copy p + p { margin-top: 20px; }
   .about-copy strong { color: var(--fg); font-weight: 600; }
@@ -93,21 +89,22 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
   .atags {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
-    margin-top: 30px;
+    gap: 8px;
+    margin-top: 34px;
   }
   .atag {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--gold);
-    border: 1px solid var(--gold25);
-    padding: 6px 13px;
-    transition: background .2s, border-color .2s;
+    font-family: var(--sans);
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--fg2);
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 980px;
+    padding: 7px 15px;
+    transition: background .2s, color .2s;
     cursor: default;
   }
-  .atag:hover { background: var(--gold08); border-color: var(--gold); }
+  .atag:hover { background: var(--gold08); color: var(--gold); }
   .cred {
     display: flex;
     gap: 18px;
@@ -126,134 +123,117 @@ import { credentials, certifications, aboutTags } from '../../data/portfolio';
   .about-r.in .cred:nth-child(5) { opacity: 1; transform: none; transition-delay: 0.4s; }
   .about-r.in .cred:nth-child(6) { opacity: 1; transform: none; transition-delay: 0.5s; }
   .cred-n {
-    font-family: var(--mono);
-    font-size: 11px;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
     color: var(--gold);
     padding-top: 2px;
-    min-width: 24px;
+    min-width: 26px;
     flex-shrink: 0;
   }
-  .cred-t { font-size: 15px; font-weight: 600; color: var(--fg); margin-bottom: 3px; line-height: 1.3; }
-  .cred-s { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+  .cred-t { font-size: 16px; font-weight: 600; color: var(--fg); margin-bottom: 4px; line-height: 1.3; }
+  .cred-s { font-size: 14px; color: var(--muted); line-height: 1.55; }
 
   /* ============================================
-     EDUCATION
+     EDUCATION — claro, tarjetas redondeadas
   ============================================ */
   .edu-sec {
-    padding: 0 var(--edge) 128px;
-    background: transparent;
+    padding: 140px var(--edge);
+    background: var(--bg);
   }
   .edu-top {
-    border-top: 1px solid var(--line);
-    padding-top: 68px;
-    margin-bottom: 52px;
+    margin-bottom: 56px;
   }
   .edu-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--line);
+    gap: 24px;
   }
   .edu-card {
-    background: var(--cream);
-    padding: 36px 32px;
+    background: var(--bg2);
+    border-radius: 22px;
+    padding: 40px 36px;
     position: relative;
     overflow: hidden;
-    transition: background .28s;
+    transition:
+      opacity var(--rv-op) var(--ease-rv) var(--rv-delay, 0s),
+      translate var(--rv-mv) var(--ease-rv) var(--rv-delay, 0s),
+      transform .35s cubic-bezier(.22,1,.36,1),
+      background .28s;
   }
-  .edu-card:hover { background: var(--warm); }
-  .edu-card::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--gold);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .42s ease;
-  }
-  /* On scroll-reveal: partial line at 30% — hover completes it */
-  .edu-card.in::after {
-    transform: scaleX(0.3);
-    transition: transform 0.8s cubic-bezier(.25,.46,.45,.94) 0.4s;
-  }
-  .edu-card:hover::after {
-    transform: scaleX(1);
-    transition: transform .42s ease 0s;
-  }
+  .edu-card:hover { transform: translateY(-6px); background: #eeeef0; }
   .edu-yr {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: .15em;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0;
     color: var(--gold);
-    margin-bottom: 13px;
+    margin-bottom: 14px;
   }
   .edu-deg {
-    font-family: var(--serif);
-    font-size: 22px;
+    font-family: var(--display);
+    font-size: 24px;
     font-weight: 600;
+    letter-spacing: -0.02em;
     color: var(--fg);
-    line-height: 1.22;
-    margin-bottom: 5px;
+    line-height: 1.18;
+    margin-bottom: 6px;
   }
   .edu-sch {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
     color: var(--muted);
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
-  .edu-desc { font-size: 15px; color: var(--fg2); line-height: 1.72; }
+  .edu-desc { font-size: 15.5px; color: var(--fg2); line-height: 1.6; }
   .edu-badge {
     display: inline-block;
-    font-family: var(--mono);
-    font-size: 9.5px;
-    letter-spacing: .13em;
-    text-transform: uppercase;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
     color: var(--gold);
     background: var(--gold08);
-    padding: 4px 10px;
-    margin-top: 14px;
-    border: 1px solid var(--gold15);
+    border-radius: 980px;
+    padding: 5px 14px;
+    margin-top: 18px;
   }
-  .certs-block { margin-top: 56px; }
+  .certs-block { margin-top: 64px; }
   .certs-hd {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: .22em;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
-  .certs-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+  .certs-wrap { display: flex; flex-wrap: wrap; gap: 10px; }
   .cert {
     display: flex;
     flex-direction: column;
-    background: var(--warm);
-    border: 1px solid var(--line);
-    padding: 11px 16px;
-    transition: background .2s, border-color .2s;
+    background: var(--bg2);
+    border-radius: 14px;
+    padding: 14px 18px;
+    transition: background .2s;
     cursor: default;
   }
-  .cert:hover { background: var(--gold08); border-color: var(--gold25); }
-  .cert-name { font-size: 13.5px; font-weight: 500; color: var(--fg2); line-height: 1.3; }
-  .cert-meta { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin-top: 3px; }
+  .cert:hover { background: var(--gold08); }
+  .cert-name { font-size: 14px; font-weight: 500; color: var(--fg); line-height: 1.3; }
+  .cert-meta { font-family: var(--sans); font-size: 12px; color: var(--muted); margin-top: 4px; }
 
   /* ============================================
      RESPONSIVE
   ============================================ */
   @media (max-width: 1140px) {
-    .about-sec, .edu-sec { padding-left: 32px; padding-right: 32px; }
+    .about-sec, .edu-sec { padding-left: 28px; padding-right: 28px; }
   }
   @media (max-width: 1024px) {
     .about-sec { grid-template-columns: 1fr; gap: 52px; }
     .edu-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 768px) {
-    .about-sec { padding: 80px 20px; }
-    .edu-sec { padding: 0 20px 80px; }
+    .about-sec { padding: 90px 22px; }
+    .edu-sec { padding: 90px 22px; }
   }
 </style>

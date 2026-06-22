@@ -6,13 +6,13 @@ import { services } from '../../data/portfolio';
   <div class="srv-head">
     <div class="rv-l">
       <div class="s-tag"><div class="s-line"></div><span class="s-txt">Servicios</span></div>
-      <h2 class="sec dk">Dónde genero<br><em>valor.</em></h2>
+      <h2 class="sec">Dónde genero<br><em>valor.</em></h2>
     </div>
     <p class="srv-intro rv">Asesoría de nivel directivo: combino visión estratégica, diseño y herramientas de IA para que organizaciones, instituciones y marcas crezcan con intención — con resultados medibles sobre la mesa.</p>
   </div>
   <div class="srv-grid">
     {services.map((srv, i) => (
-      <div class="srv-card rv" style={`transition-delay: ${i * 0.07}s`}>
+      <div class="srv-card rv" style={`--rv-delay: ${i * 0.07}s`}>
         <div class="srv-n">{srv.number}</div>
         <h3 class="srv-title">{srv.title}</h3>
         <div class="srv-desc">{srv.description}</div>
@@ -26,93 +26,90 @@ import { services } from '../../data/portfolio';
 
 <style>
   /* ============================================
-     SERVICES
+     SERVICES — claro, tarjetas limpias con aire
   ============================================ */
   .services-sec {
-    padding: 124px var(--edge);
-    background: var(--ink);
+    padding: 140px var(--edge);
+    background: var(--bg);
   }
   .srv-head {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 88px;
-    margin-bottom: 64px;
+    gap: 80px;
+    margin-bottom: 80px;
+    align-items: end;
   }
-  .srv-intro { font-size: 17px; line-height: 1.85; color: rgba(218,208,192,.66); padding-top: 10px; }
+  .srv-intro { font-size: 19px; line-height: 1.6; color: var(--fg2); }
   .srv-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: rgba(244,240,232,.05);
+    gap: 24px;
   }
   .srv-card {
-    background: var(--ink);
-    padding: 42px 38px;
+    background: var(--bg2);
+    border-radius: 22px;
+    padding: 40px 36px;
     position: relative;
     overflow: hidden;
-    transition: background .28s;
+    transition:
+      opacity var(--rv-op) var(--ease-rv) var(--rv-delay, 0s),
+      translate var(--rv-mv) var(--ease-rv) var(--rv-delay, 0s),
+      transform .35s cubic-bezier(.22,1,.36,1),
+      background .28s;
   }
-  .srv-card:hover { background: var(--ink2); }
-  .srv-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 0;
-    background: var(--gold);
-    transition: height .42s ease;
+  .srv-card:hover {
+    transform: translateY(-6px);
+    background: #eeeef0;
   }
-  /* On scroll-reveal: bar grows to a teaser 40px, inviting hover */
-  .srv-card.in::before {
-    height: 40px;
-    transition: height 0.6s cubic-bezier(.25,.46,.45,.94) 0.3s;
-  }
-  /* On hover: complete the bar (override the reveal delay) */
-  .srv-card:hover::before {
-    height: 100%;
-    transition: height .42s ease 0s;
-  }
-  /* Numeral monumental en relleno dorado sutil */
+  /* Numeral monumental, dorado muy sutil */
   .srv-n {
-    font-family: var(--serif);
-    font-size: 60px;
+    font-family: var(--display);
+    font-size: 17px;
     font-weight: 600;
     line-height: 1;
-    color: rgba(182, 144, 58, 0.28);
-    margin-bottom: 20px;
+    color: var(--gold);
+    margin-bottom: 28px;
+    letter-spacing: 0.02em;
   }
-  .srv-title { font-family: var(--serif); font-size: 26px; font-weight: 600; color: rgba(244,240,232,.97); margin-bottom: 11px; }
+  .srv-title {
+    font-family: var(--display);
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+    margin-bottom: 12px;
+    line-height: 1.15;
+  }
   .srv-desc {
-    font-size: 15px;
-    line-height: 1.8;
-    color: rgba(244,240,232,.86);
-    font-weight: 500;
-    margin-bottom: 16px;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: var(--fg2);
+    margin-bottom: 22px;
   }
-  .srv-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .srv-tags { display: flex; flex-wrap: wrap; gap: 6px; }
   .srv-tag {
-    font-family: var(--mono);
-    font-size: 9.5px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: rgba(182,144,58,.52);
-    border: 1px solid rgba(182,144,58,.18);
-    padding: 3px 8px;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: var(--muted);
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 980px;
+    padding: 5px 12px;
   }
 
   /* ============================================
      RESPONSIVE
   ============================================ */
   @media (max-width: 1140px) {
-    .services-sec { padding-left: 32px; padding-right: 32px; }
+    .services-sec { padding-left: 28px; padding-right: 28px; }
   }
   @media (max-width: 1024px) {
-    .srv-head { grid-template-columns: 1fr; gap: 24px; }
+    .srv-head { grid-template-columns: 1fr; gap: 28px; }
     .srv-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 768px) {
-    .services-sec { padding: 80px 20px; }
+    .services-sec { padding: 90px 22px; }
     .srv-grid { grid-template-columns: 1fr; }
   }
 </style>

@@ -52,11 +52,14 @@ if (daysAgo < 7) {
 
 <style>
   .li-card {
-    background: white;
+    background: var(--bg);
     padding: 2rem;
-    border: 1px solid rgba(13, 11, 9, 0.08);
-    border-radius: 0;
-    transition: all 0.3s ease;
+    border-radius: 22px;
+    transition:
+      opacity var(--rv-op) var(--ease-rv) var(--rv-delay, 0s),
+      translate var(--rv-mv) var(--ease-rv) var(--rv-delay, 0s),
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.35s ease;
     text-decoration: none;
     color: inherit;
     display: flex;
@@ -65,9 +68,8 @@ if (daysAgo < 7) {
   }
 
   .li-card:hover {
-    /* micro-lift con sombra cálida sutil */
-    box-shadow: 0 12px 30px rgba(120, 96, 50, 0.13);
-    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px);
   }
 
   .li-meta {
@@ -93,14 +95,15 @@ if (daysAgo < 7) {
   }
 
   .li-nm {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 0.95rem;
+    color: var(--fg);
     margin-bottom: 0.25rem;
   }
 
   .li-dt {
     font-size: 0.8rem;
-    color: rgba(107, 99, 89, 0.8);
+    color: var(--muted);
   }
 
   .li-body {
@@ -110,18 +113,19 @@ if (daysAgo < 7) {
   }
 
   .li-title {
-    font-family: var(--serif);
+    font-family: var(--display);
     font-size: 1.4rem;
     font-weight: 600;
+    letter-spacing: -0.02em;
     color: var(--fg);
-    line-height: 1.25;
+    line-height: 1.2;
     margin: 0;
   }
 
   .excerpt {
     font-size: 0.95rem;
-    line-height: 1.65;
-    color: rgba(107, 99, 89, 0.85);
+    line-height: 1.6;
+    color: var(--fg2);
     margin: 0;
   }
 
@@ -133,15 +137,14 @@ if (daysAgo < 7) {
   }
 
   .li-tag {
-    font-family: var(--mono);
-    background: rgba(182, 144, 58, 0.08);
-    color: var(--gold);
-    padding: 0.4rem 0.8rem;
-    border-radius: 2px;
-    font-size: 10px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-family: var(--sans);
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--muted);
+    padding: 0.35rem 0.75rem;
+    border-radius: 980px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0;
   }
 
   .li-foot {
@@ -149,10 +152,10 @@ if (daysAgo < 7) {
     justify-content: space-between;
     align-items: center;
     padding-top: 1rem;
-    border-top: 1px solid rgba(13, 11, 9, 0.08);
-    color: rgba(107, 99, 89, 0.8);
+    border-top: 1px solid var(--line);
+    color: var(--muted);
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .li-link {

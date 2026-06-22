@@ -80,22 +80,7 @@ import ContactSection from '../components/sections/ContactSection.astro';
       hlObs.observe(highlightsEl);
     }
 
-    // 6. Portfolio cards — mouse-driven image parallax
-    document.querySelectorAll<HTMLElement>('.pc').forEach(card => {
-      const img = card.querySelector<HTMLElement>('.pc-bg');
-      if (!img) return;
-      card.addEventListener('mousemove', (e: MouseEvent) => {
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        img.style.transform = `scale(1.065) translate(${x * -12}px, ${y * -12}px)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        img.style.transform = '';
-      });
-    });
-
-    // 9. Blog cards — micro-lift en hover vía CSS (BlogCard.astro), sin JS
+    // Portfolio & blog cards — hover lift/scale vía CSS, sin JS
 
   } // end prefers-reduced-motion check
 </script>
