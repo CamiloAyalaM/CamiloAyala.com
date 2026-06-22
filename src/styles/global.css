@@ -254,11 +254,6 @@ nav.compact {
   color: var(--goldt);
 }
 
-/* Scroll-spy — enlace activo del nav */
-.nav-links a.active {
-  color: var(--fg);
-}
-
 /* TIPOGRAFÍA EN MOVIMIENTO — split por palabras */
 .motion .h1,
 .motion .sec {
