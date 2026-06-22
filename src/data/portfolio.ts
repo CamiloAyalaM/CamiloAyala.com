@@ -11,7 +11,7 @@ export const portfolioProjects = [
     tags: ['Marketing', 'AR', 'Social Media', 'Campaña USA'],
     featured: true,
     gridSize: 'lg',
-    image: '/assets/img/portal-to-paradise.png'
+    image: '/assets/img/portal-to-paradise.webp'
   },
   {
     id: 'banco-gabo',
@@ -39,7 +39,7 @@ export const portfolioProjects = [
     tags: ['Investigación', 'IA', 'Académico', 'Humanidades Digitales'],
     featured: true,
     gridSize: 'sm',
-    image: '/assets/img/Acapulco_Chair.jpg'
+    image: '/assets/img/acapulco-chair.webp'
   },
   {
     id: 'escuela-gobierno',
@@ -53,7 +53,7 @@ export const portfolioProjects = [
     tags: ['Campaña Digital', 'Diseño Web', 'Comunicación'],
     featured: true,
     gridSize: 'lg',
-    image: '/assets/img/era-de-los-datos.png'
+    image: '/assets/img/era-de-los-datos.webp'
   },
   {
     id: 'modulario',
@@ -67,7 +67,7 @@ export const portfolioProjects = [
     tags: ['Diseño Participativo', 'Impacto Social', 'Producto'],
     featured: true,
     gridSize: 'md',
-    image: '/assets/img/Portada-modulario.jpg'
+    image: '/assets/img/portada-modulario.webp'
   },
   {
     id: 'durero',
@@ -81,7 +81,7 @@ export const portfolioProjects = [
     tags: ['Diseño UX/UI', 'Web App', 'Cultural'],
     featured: true,
     gridSize: 'md',
-    image: '/assets/img/durero.jpg'
+    image: '/assets/img/durero.webp'
   }
 ];
 
@@ -198,16 +198,16 @@ export const aboutTags = [
 ];
 
 export const clients = [
-  { name: 'Nokia USA', logo: '/assets/img/nokia-usa.png', bg: 'white' },
+  { name: 'Nokia USA', logo: '/assets/img/nokia-usa.webp', bg: 'white' },
   { name: 'Marriott Rewards', logo: '/assets/img/marriott.svg', bg: 'white' },
-  { name: 'Banco de la República', logo: '/assets/img/banco-republica.png', bg: 'white' },
-  { name: 'Uniandes', logo: '/assets/img/logo-uniandes.png', bg: 'white' },
-  { name: 'NOBOX', logo: '/assets/img/nbx.jpg', bg: 'white', scale: 1.3 },
-  { name: 'IPES Bogotá', logo: '/assets/img/ipes.png', bg: 'white' },
-  { name: 'U. El Bosque', logo: '/assets/img/logoUniversidadElBosque.png', bg: 'white' },
-  { name: 'Colegio Marymount', logo: '/assets/img/colegio-marymount.jpg', bg: 'white' },
-  { name: 'MUZO Emerald', logo: '/assets/img/muzo.png', bg: 'white' },
-  { name: 'U. Sergio Arboleda', logo: '/assets/img/sergio-arboleda-university.png', bg: 'white' }
+  { name: 'Banco de la República', logo: '/assets/img/banco-republica.webp', bg: 'white' },
+  { name: 'Uniandes', logo: '/assets/img/logo-uniandes.webp', bg: 'white' },
+  { name: 'NOBOX', logo: '/assets/img/nbx.webp', bg: 'white', scale: 1.3 },
+  { name: 'IPES Bogotá', logo: '/assets/img/ipes.webp', bg: 'white' },
+  { name: 'U. El Bosque', logo: '/assets/img/universidad-el-bosque.webp', bg: 'white' },
+  { name: 'Colegio Marymount', logo: '/assets/img/colegio-marymount.webp', bg: 'white' },
+  { name: 'MUZO Emerald', logo: '/assets/img/muzo.webp', bg: 'white' },
+  { name: 'U. Sergio Arboleda', logo: '/assets/img/sergio-arboleda.webp', bg: 'white' }
 ];
 
 export const skillCategories = [
