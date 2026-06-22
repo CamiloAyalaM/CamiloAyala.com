@@ -10,8 +10,8 @@
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Imágenes y estáticos → caché de 30 días
-/assets/*
+# Imágenes → caché de 30 días
+/assets/img/*
   Cache-Control: public, max-age=2592000
 
 # Fuentes (nombres estables) → inmutables un año
