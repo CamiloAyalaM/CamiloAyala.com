@@ -171,8 +171,8 @@ nav.compact {
    ANIMACIONES
 ============================================================ */
 @keyframes dash-grow {
-  from { width: 0; }
-  to { width: 24px; }
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
 @keyframes f-up {
   from { opacity: 0; transform: translateY(16px); }
@@ -223,14 +223,16 @@ nav.compact {
   margin-bottom: 20px;
 }
 .s-line {
-  width: 0;
+  width: 22px;
   height: 1px;
   background: var(--gold);
-  transition: width 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .rv.in .s-line,
 .rv-l.in .s-line {
-  width: 22px;
+  transform: scaleX(1);
 }
 .s-txt {
   font-family: var(--sans);
@@ -329,9 +331,11 @@ nav.compact {
 }
 .ey-dash {
   display: block;
-  width: 0;
+  width: 24px;
   height: 1px;
   background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left center;
   animation: dash-grow 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
 }
 .ey-txt {
