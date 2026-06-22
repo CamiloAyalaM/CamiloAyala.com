@@ -55,8 +55,8 @@ const canonicalURL = new URL(Astro.url.pathname, url);
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@400&family=Manrope:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@400&family=Manrope:wght@400;500;600&display=swap" /></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" /></noscript>
 
   <!-- LCP image preload -->
   <link rel="preload" as="image" href="/assets/img/camilo-photo.webp" fetchpriority="high" />
@@ -145,46 +145,6 @@ const canonicalURL = new URL(Astro.url.pathname, url);
 </head>
 
 <body>
-  <div id="cur"></div><div id="curl"></div>
   <slot />
-  
-  <script defer>
-    // Custom cursor — solo en dispositivos con puntero fino
-    if (window.matchMedia('(pointer: fine)').matches) {
-    const cur = document.getElementById('cur');
-    const curl = document.getElementById('curl');
-    let rx = 0, ry = 0;
-    
-    let mx = 0, my = 0;
-    document.addEventListener('mousemove', (e) => {
-      mx = e.clientX;
-      my = e.clientY;
-      cur.style.transform = `translate(calc(${mx}px - 50%), calc(${my}px - 50%))`;
-      rx += (mx - rx) * 0.1;
-      ry += (my - ry) * 0.1;
-    });
-
-    (function animate() {
-      curl.style.transform = `translate(calc(${rx}px - 50%), calc(${ry}px - 50%))`;
-      requestAnimationFrame(animate);
-    })();
-    
-    // Hover effects on interactive elements
-    document.querySelectorAll('a, button, .cl-item, .pc, .srv-card, .li-card, .atag, .cert, .edu-card').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cur.style.width = '13px';
-        cur.style.height = '13px';
-        curl.style.width = '46px';
-        curl.style.height = '46px';
-      });
-      el.addEventListener('mouseleave', () => {
-        cur.style.width = '7px';
-        cur.style.height = '7px';
-        curl.style.width = '30px';
-        curl.style.height = '30px';
-      });
-    });
-    }
-  </script>
 </body>
 </html>

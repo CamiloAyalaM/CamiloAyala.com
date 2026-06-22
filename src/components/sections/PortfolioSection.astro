@@ -5,13 +5,12 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
 ---
 
 <section class="portfolio-sec" id="portafolio">
-  <span class="ghost" aria-hidden="true">Impacto</span>
   <div class="port-head">
     <div class="rv-l">
       <div class="s-tag"><div class="s-line"></div><span class="s-txt">Portafolio</span></div>
-      <h2 class="sec">Proyectos<br>con <em>impacto.</em></h2>
+      <h2 class="sec dk">Proyectos<br>con <em>impacto.</em></h2>
     </div>
-    <p class="port-intro rv">Proyectos que he dirigido para marcas globales e instituciones de referencia, con métricas verificables: campañas de millones de impresiones, exposiciones nacionales e investigación publicada. Pasa el cursor para ver resultados.</p>
+    <p class="port-intro rv">Proyectos que he dirigido para marcas globales e instituciones de referencia, con métricas verificables: campañas de millones de impresiones, exposiciones nacionales e investigación publicada.</p>
   </div>
   <div class="port-grid">
     {featuredProjects.map((project, i) => (
@@ -21,7 +20,6 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
           <div class="pc-over">
             <div class="pc-cat">{project.category}</div>
             <div class="pc-title">{project.title}</div>
-            <div class="pc-client">{project.client}</div>
           </div>
         </div>
         <div class="pc-desc">
@@ -50,43 +48,43 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
 
 <style>
   /* ============================================
-     PORTFOLIO — 12-col asymmetric
+     PORTFOLIO — showcase oscuro, tarjetas grandes
   ============================================ */
   .portfolio-sec {
-    padding: 124px var(--edge);
-    background: var(--warm);
-    /* contexto de apilamiento para la palabra fantasma (z-index: -1) */
+    padding: 150px var(--edge);
+    background: var(--dark);
     position: relative;
     z-index: 0;
-    overflow: hidden;
   }
   .port-head {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 88px;
-    margin-bottom: 68px;
+    gap: 80px;
+    margin-bottom: 80px;
     align-items: end;
   }
-  .port-intro { font-size: 17px; line-height: 1.85; color: var(--fg2); }
+  .port-intro { font-size: 19px; line-height: 1.6; color: var(--don2); }
   .port-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 18px;
+    gap: 28px;
   }
   .pc {
     position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    background: var(--ink2);
+    cursor: default;
+    display: flex;
+    flex-direction: column;
   }
   .pc-lg { grid-column: span 7; }
   .pc-sm { grid-column: span 5; }
   .pc-md { grid-column: span 6; }
   .pc-img {
     width: 100%;
-    aspect-ratio: 16/10;
+    aspect-ratio: 16/11;
     overflow: hidden;
     position: relative;
+    border-radius: 22px;
+    background: var(--dark2);
   }
   .pc-bg {
     position: absolute;
@@ -97,114 +95,93 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
     object-position: center top;
     transition: transform .8s cubic-bezier(.25,.46,.45,.94);
   }
-  .pc:hover .pc-bg { transform: scale(1.065); }
+  .pc:hover .pc-bg { transform: scale(1.05); }
   .pc-img::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(13,11,9,.94) 0%, rgba(13,11,9,.3) 50%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,.78) 0%, rgba(0,0,0,.12) 48%, transparent 100%);
   }
   .pc-over {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 24px 28px;
+    padding: 28px 30px;
     z-index: 2;
-    transform: translateY(5px);
-    transition: transform .38s cubic-bezier(.25,.46,.45,.94);
   }
-  .pc:hover .pc-over { transform: translateY(0); }
   .pc-cat {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: .16em;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 5px;
+    color: var(--goldt);
+    margin-bottom: 8px;
   }
   .pc-title {
-    font-family: var(--serif);
-    font-size: 26px;
+    font-family: var(--display);
+    font-size: 28px;
     font-weight: 600;
-    color: #f4f0e8;
-    line-height: 1.18;
+    letter-spacing: -0.02em;
+    color: var(--don);
+    line-height: 1.12;
   }
-  .pc-client { font-size: 12.5px; color: rgba(244,240,232,.38); margin-top: 4px; }
   .pc-desc {
-    background: white;
-    border: 1px solid var(--line);
-    border-top: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .55s cubic-bezier(.25,.46,.45,.94), padding .38s ease;
+    padding: 22px 4px 0;
   }
-  .pc:hover .pc-desc { max-height: 160px; padding: 20px 28px 24px; }
   .pc-metric {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--gold);
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--goldt);
     margin-bottom: 8px;
-    letter-spacing: .04em;
   }
-  .pc-role { font-size: 15px; color: var(--fg2); line-height: 1.7; margin-bottom: 7px; }
+  .pc-role { font-size: 15.5px; color: var(--don2); line-height: 1.6; margin-bottom: 10px; }
   .pc-date {
-    font-family: var(--mono);
-    font-size: 10px;
-    color: var(--muted);
-    letter-spacing: .1em;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(245, 245, 247, 0.4);
+    letter-spacing: 0.02em;
     text-transform: uppercase;
   }
 
   /* ============================================
-     CLIENTS
+     CLIENTS — claro, logos en círculos
   ============================================ */
   .clients-sec {
-    padding: 84px var(--edge);
-    background: var(--warm);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    padding: 110px var(--edge);
+    background: var(--bg2);
   }
   .cl-hd {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: .22em;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 44px;
+    margin-bottom: 52px;
+    text-align: center;
   }
   .cl-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 1px;
-    background: var(--line);
+    gap: 20px;
   }
   .cl-item {
-    background: var(--warm);
+    background: var(--bg);
+    border-radius: 22px;
     padding: 32px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 14px;
-    transition: background .22s;
-    min-height: 160px;
-    position: relative;
-    overflow: hidden;
+    gap: 16px;
+    transition: transform .3s cubic-bezier(.22,1,.36,1);
+    min-height: 168px;
   }
-  .cl-item::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--gold);
-    transform: scaleX(0);
-    transition: transform .32s ease;
-  }
-  .cl-item:hover { background: var(--cream); }
-  .cl-item:hover::after { transform: scaleX(1); }
+  .cl-item:hover { transform: translateY(-5px); }
   .cl-logo {
     width: 80px;
     height: 80px;
@@ -213,14 +190,12 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform .22s, box-shadow .22s;
     flex-shrink: 0;
     padding: 8px;
   }
-  .cl-item:hover .cl-logo { transform: scale(1.06); box-shadow: 0 4px 14px rgba(13,11,9,.12); }
   .cl-logo img { width: 100%; height: 100%; object-fit: contain; }
   .cl-name {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--muted);
     text-align: center;
@@ -233,15 +208,16 @@ const featuredProjects = portfolioProjects.filter(p => p.featured);
      RESPONSIVE
   ============================================ */
   @media (max-width: 1140px) {
-    .portfolio-sec, .clients-sec { padding-left: 32px; padding-right: 32px; }
+    .portfolio-sec, .clients-sec { padding-left: 28px; padding-right: 28px; }
   }
   @media (max-width: 1024px) {
-    .port-head { grid-template-columns: 1fr; gap: 24px; }
+    .port-head { grid-template-columns: 1fr; gap: 28px; }
     .cl-grid { grid-template-columns: repeat(5, 1fr); }
   }
   @media (max-width: 768px) {
-    .portfolio-sec, .clients-sec { padding: 80px 20px; }
-    .port-grid { grid-template-columns: 1fr; }
+    .portfolio-sec { padding: 90px 22px; }
+    .clients-sec { padding: 80px 22px; }
+    .port-grid { grid-template-columns: 1fr; gap: 36px; }
     .pc-lg, .pc-sm, .pc-md { grid-column: span 1; }
     .cl-grid { grid-template-columns: repeat(2, 1fr); }
   }
