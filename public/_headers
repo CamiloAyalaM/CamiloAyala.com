@@ -1,0 +1,15 @@
+# Cloudflare Pages — cabeceras de seguridad y caché
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000
+
+# Assets con hash de contenido → inmutables un año
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Imágenes y estáticos → caché de 30 días
+/assets/*
+  Cache-Control: public, max-age=2592000
