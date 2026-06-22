@@ -3,8 +3,8 @@ export const blogPosts = [
     id: 'diseño-generativo-ia',
     title: 'Diseño generativo: no es futurismo, es conversación',
     date: new Date('2025-03-08'),
-    excerpt: 'El diseño generativo no es solo una herramienta — es una conversación entre el diseñador y el pensamiento computacional. La IA no reemplaza la creatividad, la amplifica.',
-    content: `El **diseño generativo** no es solo una herramienta — es una conversación entre el diseñador y el pensamiento computacional. Después de ECADE2022 en Oporto, sigo convencido: la IA no reemplaza la creatividad, la **amplifica**.
+    excerpt: 'El diseño generativo no es solo una herramienta: es una conversación entre el diseñador y el pensamiento computacional. La IA no reemplaza la creatividad, la amplifica.',
+    content: `El **diseño generativo** no es solo una herramienta: es una conversación entre el diseñador y el pensamiento computacional. Después de ECADE2022 en Oporto, sigo convencido: la IA no reemplaza la creatividad, la **amplifica**.
 
 La diferencia entre usar ChatGPT para generar un diseño y usar diseño generativo es la intención. Uno es atajar, el otro es arquitectura.
 
@@ -26,10 +26,10 @@ En mis proyectos con MODULARIO y con marcas internacionales, la IA generativa me
     id: 'marketing-educativo',
     title: '5 años en marketing educativo: construir proyectos de vida',
     date: new Date('2025-03-01'),
-    excerpt: 'Marketing educativo no vende programas, construye proyectos de vida. La diferencia importa — y se nota en cada métrica.',
+    excerpt: 'Marketing educativo no vende programas, construye proyectos de vida. La diferencia importa, y se nota en cada métrica.',
     content: `5 años liderando comunicaciones en universidades me enseñaron algo clave: el **marketing educativo** no vende programas, construye **proyectos de vida**.
 
-La diferencia importa — y se nota en cada métrica, en cada matrícula, en cada historia de transformación.
+La diferencia importa, y se nota en cada métrica, en cada matrícula, en cada historia de transformación.
 
 Cuando trabajé en Uniandes y ahora en El Bosque, aprendí que:
 
@@ -60,7 +60,7 @@ Algunos principios que funcionan:
     title: 'MODULARIO: El mejor diseño viene del campo, no del escritorio',
     date: new Date('2025-02-22'),
     excerpt: 'Trabajar con vendedores de la economía informal de Bogotá transformó completamente el brief. El usuario no es un dato: es una persona con una historia.',
-    content: `**MODULARIO** — el mejor diseño viene del campo, no del escritorio.
+    content: `**MODULARIO**: el mejor diseño viene del campo, no del escritorio.
 
 Trabajar con vendedores de la economía informal de Bogotá transformó por completo el brief. El usuario no es un dato: es una persona con una historia.
 
@@ -74,7 +74,7 @@ Y ahí empezó el verdadero diseño. Porque resultó que:
 
 - La ergonomía que diseñamos no contemplaba que muchos vendedores tienen problemas de espalda crónica (llevan años en la calle).
 - El módulo bonito tenía bolsillos que se rompían rápido por el uso real (no por mal diseño, sino porque el uso real es mucho más brutal que lo que imaginamos).
-- Los colores que elegimos no permitían diferenciación entre vendedores — y resulta que la identidad visual SÍ importa en la economía informal.
+- Los colores que elegimos no permitían diferenciación entre vendedores, y resulta que la identidad visual SÍ importa en la economía informal.
 
 **El diseño participativo no es una caja de consulta.** Es estar dispuesto a que el usuario te corrija una y otra vez. Y eso duele, porque a veces significa botar semanas de trabajo. Pero eso es lo que hace diferencia.
 
