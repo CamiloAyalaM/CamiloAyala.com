@@ -1,0 +1,18 @@
+# Camilo Ayala Monje
+
+> Ejecutivo senior en estrategia de marca, mercadeo y transformación digital con más de 12 años de experiencia en educación superior, banca central y consultoría internacional. Magíster en Diseño (Universidad de los Andes) y profesor de posgrado en marketing e inteligencia artificial. Basado en Bogotá, Colombia.
+
+## Secciones del sitio
+
+- [Servicios](https://camiloayala.com/#servicios): dirección estratégica de marca, growth y marketing educativo, transformación digital y CRM, UX y experiencia de cliente, IA y diseño generativo, conferencias y formación ejecutiva.
+- [Sobre mí](https://camiloayala.com/#sobre): trayectoria en la Universidad de los Andes, el Banco de la República y la Universidad El Bosque; formación y certificaciones.
+- [Portafolio](https://camiloayala.com/#portafolio): proyectos para Marriott, Banco de la República, Universidad de los Andes e IPES Bogotá, entre otros.
+- [Blog](https://camiloayala.com/#blog): artículos sobre diseño estratégico, IA, educación y comunicación.
+- [Preguntas frecuentes](https://camiloayala.com/#faq): servicios, sectores de experiencia, formación, trabajo remoto y contacto.
+- [Contacto](https://camiloayala.com/#contacto): camiloayalamonje@gmail.com.
+
+## Enlaces
+
+- [LinkedIn](https://linkedin.com/in/camiloayalam)
+- [Behance](https://behance.net/camiloayala)
+- [ORCID](https://orcid.org/0000-0002-3485-718X)
