@@ -28,8 +28,8 @@
   --gold15: rgba(182, 144, 58, 0.15);
   --gold25: rgba(182, 144, 58, 0.25);
 
-  /* Tipografía: sans geométrica con carácter + sans legible */
-  --display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  /* Tipografía: titulares Montserrat (elegante, poco quirky) + cuerpo Inter */
+  --display: 'Montserrat', system-ui, -apple-system, sans-serif;
   --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   /* Aliases de compatibilidad con clases existentes */
   --serif: var(--display);
@@ -180,12 +180,18 @@ nav.compact {
 /* ============================================================
    REVEAL ON SCROLL
 ============================================================ */
+/* Reveal al entrar en viewport.
+   - opacity: curva casi lineal (cubic-bezier .33,0,.2,1) y duración amplia →
+     fade-in claramente perceptible, no un "pop".
+   - transform: easeOutQuint (.22,1,.36,1) → desliza hacia arriba y desacelera
+     con elegancia, sin el latigazo de expo.
+   El stagger entre tarjetas viene del transition-delay inline en el markup. */
 .rv,
 .rv-l {
   opacity: 0;
-  transform: translate3d(0, 24px, 0);
-  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translate3d(0, 42px, 0);
+  transition: opacity 1s cubic-bezier(0.33, 0, 0.2, 1),
+    transform 1.15s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform, opacity;
 }
 .rv.in,
