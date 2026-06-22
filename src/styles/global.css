@@ -24,6 +24,7 @@
   /* Acento dorado sutil (identidad) */
   --gold: #b6903a;
   --goldt: #c9a14a;
+  --gold-ink: #8a6d24;     /* dorado oscuro para texto pequeño sobre claro (WCAG AA) */
   --gold08: rgba(182, 144, 58, 0.08);
   --gold15: rgba(182, 144, 58, 0.15);
   --gold25: rgba(182, 144, 58, 0.25);
@@ -80,6 +81,13 @@ body {
 ::selection {
   background: rgba(182, 144, 58, 0.22);
   color: var(--fg);
+}
+
+/* Foco visible para navegación con teclado */
+:where(a, button, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 3px;
 }
 
 /* ============================================================
@@ -230,8 +238,11 @@ nav.compact {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-ink);
 }
+/* En la sección oscura del portafolio el dorado claro contrasta mejor */
+.sec.dk + * .s-txt,
+.portfolio-sec .s-txt { color: var(--goldt); }
 
 /* Títulos de sección — sans geométrica, grandes y con aire */
 .sec {
