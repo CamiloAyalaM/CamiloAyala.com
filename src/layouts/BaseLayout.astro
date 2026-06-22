@@ -61,11 +61,9 @@ const canonicalURL = new URL(Astro.url.pathname, url);
   <!-- Canonical -->
   <link rel="canonical" href={canonicalURL.toString()} />
   
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" /></noscript>
+  <!-- Fonts (auto-hospedadas; las @font-face viven en global.css) -->
+  <link rel="preload" href="/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
 
   <!-- LCP image preload -->
   <link rel="preload" as="image" href="/assets/img/camilo-photo.webp" fetchpriority="high" />

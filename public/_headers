@@ -13,3 +13,7 @@
 # Imágenes y estáticos → caché de 30 días
 /assets/*
   Cache-Control: public, max-age=2592000
+
+# Fuentes (nombres estables) → inmutables un año
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
