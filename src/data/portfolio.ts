@@ -134,38 +134,52 @@ export const credentials = [
   {
     number: '01',
     title: 'Coordinador de Admisiones — U. El Bosque',
-    subtitle: 'Dirección del sistema de admisiones · Facultad de Creación y Comunicación · 2025–presente',
-    description: 'Integración de captación, evaluación y acompañamiento de aspirantes; estrategia articulada con áreas académicas y de mercadeo, con indicadores clave para la toma de decisiones.'
+    subtitle: 'Dirección del sistema de admisiones · Facultad de Creación y Comunicación · 2025–presente'
   },
   {
     number: '02',
-    title: 'Profesor de posgrado — ESEIT',
-    subtitle: 'Especialización en Gerencia Comercial · Especialización en Marketing e Inteligencia Artificial',
-    description: 'Formo a directivos y profesionales en ejercicio integrando estrategia comercial, comportamiento de mercado e impacto real de la IA en las decisiones de negocio.'
+    title: 'Profesor de planta — U. El Bosque',
+    subtitle: 'Pregrado en Diseño de Comunicación · dirijo el Laboratorio de Contenidos · 2025–presente'
   },
   {
     number: '03',
-    title: 'Líder de Mercadeo y Experiencia — Uniandes',
-    subtitle: '7 años · Escuela de Gobierno Alberto Lleras Camargo · Ingeniería Mecánica',
-    description: 'Dirección estratégica de mercadeo y comunicaciones, liderando equipos multidisciplinarios y el plan integral de posicionamiento, captación y reputación institucional.'
+    title: 'Profesor de posgrado — ESEIT',
+    subtitle: 'Gerencia Comercial · Marketing e Inteligencia Artificial · 2026–presente'
   },
   {
     number: '04',
-    title: 'Laboratorio CREA — creación y liderazgo',
-    subtitle: 'Iniciativa estratégica STEAM+ · patrocinio privado · alcance local, regional y nacional',
-    description: 'Lideré la creación e implementación de un laboratorio de formación STEAM+ con financiación privada, desde el diseño de la iniciativa hasta su operación con impacto nacional.'
+    title: 'Profesor — Universidad Sergio Arboleda',
+    subtitle: 'Prototipado digital y FabLab · pregrado en Diseño Digital · 2024–2025'
   },
   {
     number: '05',
-    title: 'Banco de la República — Subgerencia Cultural',
-    subtitle: 'Proyectos estratégicos de divulgación · Diseñador de la moneda conmemorativa 90 Años',
-    description: 'Liderazgo de proyectos museográficos y de acceso público. Ganador del concurso nacional de diseño de la moneda conmemorativa de los 90 años del Banco.'
+    title: 'Líder de Mercadeo y Experiencia — Uniandes',
+    subtitle: 'Estrategia, equipos y comunicaciones · Escuela de Gobierno e Ingeniería · 2017–2024'
   },
   {
     number: '06',
+    title: 'Laboratorio CREA — Uniandes y Schlumberger (SLB)',
+    subtitle: 'Formación STEAM+ que fundé y dirigí · alianza universidad–empresa · alcance nacional'
+  },
+  {
+    number: '07',
+    title: 'Investigación en diseño generativo — Uniandes',
+    subtitle: 'Magíster en Diseño · tesis y ponencia sobre co-creación humano–máquina · 2021–2022'
+  },
+  {
+    number: '08',
     title: 'Consultor internacional',
-    subtitle: 'Marriott Rewards · Nokia USA · NOBOX · MUZO Emerald — USA y Caribe',
-    description: 'Diseño experiencial, audiovisual y de marca para cuentas globales, desde campañas internacionales hasta fotografía especializada de alta joyería.'
+    subtitle: 'Marriott Rewards · Nokia USA · NOBOX · MUZO Emerald · 2017–2020'
+  },
+  {
+    number: '09',
+    title: 'Coordinador de Mercadeo — Colegio Marymount',
+    subtitle: 'Estrategia digital y embudos · fortalecimiento de matrícula · 2015–2016'
+  },
+  {
+    number: '10',
+    title: 'Diseñador — Banco de la República',
+    subtitle: 'Subgerencia Cultural · autor de la moneda conmemorativa de los 90 años · 2012–2015'
   }
 ];
 
